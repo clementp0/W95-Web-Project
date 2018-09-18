@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr" >
+    <head>
+        <meta charset="UTF-8">
+        <title>W95 I Clément POMMERIE</title>
+
+        <!-- LINKS -->
+        <link href="https://fonts.googleapis.com/css?family=VT323">
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="icon" href="images/Icon_40.ico" />
+
+        <!-- FLEMME DE FAIRE UN FICHIER JS A COTE -->
+
+        <style>
+            #draggable { width: 150px; height: 150px; padding: 0.5em; }
+        </style>
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- FENETRE DRAGGABLES / BORDEL -->
+
+        <script>
+
+            function on() {
+                document.getElementById("overlay").style.display = "block";
+            }
+
+            function off() {
+                document.getElementById("overlay").style.display = "none";
+            }
+
+            function play() {
+                var audio = document.getElementById('audio1');
+                if (audio.paused) {
+                    audio.play();
+                }else{
+                    audio.pause();
+                    audio.currentTime = 1
+                }
+            }
+            function titou() {
+                var audio = document.getElementById('audio2');
+                if (audio.paused) {
+                    audio.play();
+                }else{
+                    audio.pause();
+                    audio.currentTime = 1
+                }
+            }
+            function scar() {
+                var audio = document.getElementById('audio3');
+                if (audio.paused) {
+                    audio.play();
+                }else{
+                    audio.pause();
+                    audio.currentTime = 1
+                }
+            }
+            
+            $( function() {
+                $( ".fenetrecp" ).draggable();
+            } );
+            $( function() {
+                $( ".fenetrecp2" ).draggable();
+            } );
+            $( function() {
+                $( ".fenetrecp3" ).draggable();
+            } );
+            $( function() {
+                $( ".fenetrecp4" ).draggable();
+            } );
+            $( function() {
+                $( ".documents" ).draggable();
+            } );
+
+            $( function() {
+                $( "#site" ).draggable();
+            } );
+
+            $( function() {
+                $( ".setup" ).draggable();
+            } );
+
+            $( function() {
+                $( ".notepad" ).draggable();
+            } );
+
+
+            function yolo(id) {
+
+                var divelement = document.getElementById(id);
+
+                if(divelement.style.display == 'none')
+                    divelement.style.display = 'block';
+                else
+                    divelement.style.display = 'none';
+            }
+            function yulu(id) {
+
+                var divelement = document.getElementById(id);
+
+                if(divelement.style.display == 'block')
+                    divelement.style.display = 'none';
+                else
+                    divelement.style.display = 'block';
+            }
+            function smj(id) {
+
+                var divelement = document.getElementById(id);
+
+                if(divelement.style.display == 'none')
+                    divelement.style.display = 'block';
+                else
+                    divelement.style.display = 'none';
+            }
+            function ouais(id){
+
+                var divelement = document.getElementById(id);
+
+                if(divelement.style.display == 'none')
+                    divelement.style.display = 'block';
+                else
+                    divelement.style.display = 'none';
+            }
+            function prout(id){
+
+                var divelement = document.getElementById(id);
+
+                if(divelement.style.display == 'none')
+                    divelement.style.display = 'block';
+                else
+                    divelement.style.display = 'none';
+            }
+            function ouep(id){
+
+                var divelement = document.getElementById(id);
+
+                if(divelement.style.display == 'none')
+                    divelement.style.display = 'block';
+                else
+                    divelement.style.display = 'none';
+            }
+
+
+        </script>
+    </head>
+    <body>
+        <div id="overlay">
+            
+            
+            <div class='shutdown' ontouchstart>
+                <div class='inner'>
+
+                    <header class='bar'>
+                        <h1>Welcome to Windows</h1>
+                    </header>
+                    <img src="images/mprserv_120.ico" alt="putain je me fais chié">
+                    <div class="us er">
+                        <a> Type a user name and password to log on to Windows.<input type="button" value="OK" class="restart" onclick="off()"></a>
+                    </div>
+                    <input type="button" value="Cancel" class="restarte" onclick="location.href='http://www.google.com'">
+                    <div class="user1">
+                        <a>  User name: </a><textarea name="" class="shut" cols="5" rows="5">Clement Pommerie
+                        </textarea><br/>
+                    </div>
+                    <div class="user2">
+                        <a> Password: </a><textarea name="" type="password" class="shut" cols="5" rows="5"></textarea><br/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- BON BAH LA YA RIEN DE SPECIAL -->
+        <div class="icon1">
+
+            <div id="site" onclick="yulu('lagrosse')"><a><img src="images/dzd.png" alt="putain je me fais chié" height="150px"></a></div>
+
+            <div ><a href="http://x.c-p.me/cv.pdf" target='_blank'><img src="images/cv.png" alt="putain je me fais chié" height="150px"></a>
+            </div>
+
+            <div id="doc" onclick="prout('mydocuments')"><a><img src="images/documents.png" alt="documents" height="150px"></a>
+            </div>
+
+            <div id="cs" onclick="ouais('csgo')"><a><img src="images/steamworkshop_guide_1390621568_guide_branding.png" alt="putain je me fais chié" height="150px"></a>
+            </div>
+            <div id="cs" onclick="ouais('setup')" ><a><img src="images/setup.png" alt="putain je me fais chié" height="150px"></a>
+            </div>
+            <div id="cs"  ><a href="https://www.epicgames.com/fortnite/fr/buy-now/battle-royale"><img src="images/corb.png" alt="putain je me fais chié" height="150px"></a>
+            </div>
+
+        </div>
+        <div class="icon2">
+            <div id="cs" onClick="play()"><a><img src="images/ic3peak.png" alt="putain je me fais chié" height="150px"><audio id="audio1" src="THIS%20WORLD%20IS%20SICK.mp3"></audio></a>
+            </div>
+            <div id="cs" onClick="titou()"><a><img src="images/6ix.png" alt="putain je me fais chié" height="150px"><audio id="audio2" src="Official%20Music%20Video.mp3"></audio></a>
+            </div>
+            <div id="cs" onClick="scar()"><a><img src="images/scar.png" alt="putain je me fais chié" height="150px"><audio id="audio3" src="scarlxrd%20-%20BRAINDEAD.mp3"></audio></a>
+            </div>
+            <div id="cs" onClick="ouais('notepad')" ><a><img src="images/help.png" alt="putain je me fais chié" height="150px"></a>
+            </div>
+            <div id="cs"  ><a href="mailto:clement.pommerie@gmail.com"><img src="images/mail.png" alt="putain je me fais chié" height="150px"></a>
+            </div>
+        </div>
+
+        <div class='fenetrecp' id="lagrosse">
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/internet_explorer5-3.png"> C-P Clement Pommerie - Microsoft Internet Explorer</h1>
+                    <div class='buttons'>
+                        <a class='minimize' onclick="smj('lagrosse'); yulu('gros')"></a>
+                        <a class='maximize'></a>
+                        <a class='close' onclick="smj('lagrosse')"></a>
+                    </div>
+                </header>
+                <nav class='menu'>
+                    <ul>
+                        <li>
+                            <a href='https://www.facebook.com/clement.pom' target='_blank'>Facebook</a>
+                        </li>
+                        <li>
+                            <a href='https://www.instagram.com/clement.po/' target='_blank'>Instagram</a>
+                        </li>
+                        <li>
+                            <a href='https://www.linkedin.com/in/cl%C3%A9ment-pommerie-a87004150/' target='_blank'>Linkedin</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class='container'>
+                    <div class='content'>
+                        <iframe name="wesh" class='wesh' src ="http://c-p.me/" width="1440px" height="920px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- DOCUMENTS -->
+
+        <div class='documents' id="mydocuments">
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/folder.ico">My Documents - C:\</h1>
+                    <div class='buttons'>
+                        <a class='minimize' onclick="smj('mydocuments'); yulu('docss')"></a>
+                        <a class='maximize'></a>
+                        <a class='close' onclick="smj('mydocuments')"></a>
+                    </div>
+                </header>
+                <nav class='menu'>
+                    <ul>
+                        <li>
+                            <a><input type="button" value="<" class="back" onclick="history.back()"></a>
+
+                        </li>
+                        <li>
+                            <a><input type="button" value=">" class="back" onclick="history.forward()"></a>
+                        </li>
+                        <li>
+                            <a class="troplong">File</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Edit</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Help</a>
+                        </li>
+                    </ul>
+                </nav>    
+                <div class='container'>
+                    <div class='content'>
+                        <iframe name="wesh" class='wesh' src ="http://x.c-p.me/documents" width="1440px" height="1220px"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setup -->
+
+        <div class='setup' id="setup">
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/mshtml_32540.ico">Setup - Paint</h1>
+                    <div class='buttons'>
+                        <a class='close' onclick="smj('setup')"></a>
+                    </div>
+                </header>
+                <nav class='menu'>
+                    <ul>
+                        <li>
+                            <a class="troplong">File</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Edit</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Help</a>
+                        </li>
+                    </ul>
+                </nav>    
+                <div class='container'>
+
+                    <div class='watermark'>
+                        <img class="paint2" src="images/paint2.png">
+                        <img class="shalom" src="images/notyet.png">
+                        <img class="gif" src="images/gif.gif">
+                        <img class="paint" src="images/paint.png">
+
+                    </div>
+                    <div class='content'></div> 
+                </div>
+            </div>
+        </div>
+
+        <!-- Notepad -->
+
+        <div class='notepad' id="notepad">
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/wordpad_165-0.png">README - Notepad</h1>
+                    <div class='buttons'>
+                        <a class='close' onclick="smj('notepad')"></a>
+                    </div>
+                </header>
+                <nav class='menu'>
+                    <ul>
+                        <li>
+                            <a class="troplong">File</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Edit</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Help</a>
+                        </li>
+                    </ul>
+                </nav>    
+                <div class='container'>
+                    <div class='content'>
+                        <a class="use"><p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;">-------------------------------------------------------------------------------------</span></p>
+                            <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Microsoft Windows 95 README for General Information</strong></span></p>
+                            <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;"><strong>August 2018</strong></span></p>
+                            <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;">-------------------------------------------------------------------------------------</span></p>
+                            <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;">(c) <strong>Pommerie Cl&eacute;ment, 2018</strong> c-p.me</span></p>
+                            <p style="text-align: left;">-----------------------------------</p>
+                            <p style="text-align: left;"><strong>How to use this website</strong></p>
+                            <p style="text-align: left;">-----------------------------------</p>
+                            <ul>
+                                <li style="text-align: left;">● This website is not my "real" website. You can visit the "real one" on<strong> c-p.me</strong></li>
+                                <li style="text-align: left;">● This website in still in Alpha, and not representative of the finished product.</li>
+                                <li style="text-align: left;"><span style="text-decoration: underline;">DO NOT USE ON MOBILE PHONE, TABLET, OR ANY DEVICE WITH LOW RESOLUTION OR LESS THAN 16:9 ASPECT RATIO.</span><strong> You will encounter a lot of bug.&nbsp;<br /></strong>Minimum Requirement (for full experience) : 1336x768px or higher</li>
+                                <li style="text-align: left;">● This website is just an overlay of my "real website" with an file browsing system, and some useless fonctionnalites.</li>
+                                <li style="text-align: left;">● All music files located on the desktop are <strong>propriety of their exclusive owners.</strong></li>
+                            </ul>
+                            <p style="text-align: left;">-----------------------------------</p>
+                            <p style="text-align: left;"><strong>Comment utiliser ce site </strong></p>
+                            <p style="text-align: left;">-----------------------------------</p>
+                            <ul class="ul">
+                                <li>● Ce site web n'est pas mon "vrai" site web. Vous pouvez visiter le "vrai" sur <strong>c-p.me</strong></li>
+                                <li style="text-align: left;">● Ce site est encore en Alpha, et n'est pas repr&eacute;sentatif du produit fini.</li>
+                                <li style="text-align: left;"><span style="text-decoration: underline;">● NE PAS UTILISER SUR UN T&Eacute;L&Eacute;PHONE MOBILE, UNE TABLETTE OU UN DISPOSITIF PR&Eacute;SENTANT UNE FAIBLE R&Eacute;SOLUTION OU UN RAPPORT D'ASPECT INF&Eacute;RIEUR &Agrave; 16: 9.</span> <strong><strong>Vous rencontrerez beaucoup de bug.<br /></strong></strong>Minimum requis (pour l'exp&eacute;rience compl&egrave;te): 1336x768px ou plus</li>
+                                <li style="text-align: left;">● Ce site est juste une superposition de mon "vrai site" avec un syst&egrave;me de navigation de fichiers, et quelques fonctionnalit&eacute;s inutiles.</li>
+                                <li style="text-align: left;">● Les trois fichiers musicaux situ&eacute;s sur le bureau sont la <strong>propri&eacute;t&eacute; de leurs propri&eacute;taires exclusif.</strong></li>
+                            </ul></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--FENETRE LINKS ET DOWNLOADS-->
+
+
+        <div class='fenetrecp2' id='hide' ontouchstart>
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/scrnsave_100.ico">C:\Windows\system32\cmd.exe</h1>
+                    <div class='buttons'>
+                        <a class='minimize' onclick="yolo('hide'); yulu('mini')"></a>
+                    </div>
+                </header>
+                <div class="oui">Microsoft Windows [Version 5.2.3790]<br/><C> Copyright 1985-2003 Microsoft Corp.</br>
+                    C:\Users\Clement> Start<div class="beta"><nobr> ______     ______      __    __     ______        ______     ______     ______   ______    <br />
+                    /\  ___\   /\  == \    /\ "-./  \   /\  ___\      /\  == \   /\  ___\   /\__  _\ /\  __ \   <br />
+                    \ \ \____  \ \  _-/    \ \ \-./\ \  \ \  __\      \ \  __<   \ \  __\   \/_/\ \/ \ \  __ \  <br />
+                    \ \_____\  \ \_\       \ \_\ \ \_\  \ \_____\     \ \_____\  \ \_____\    \ \_\  \ \_\ \_\ <br />
+                    \/_____/   \/_/        \/_/  \/_/   \/_____/      \/_____/   \/_____/     \/_/   \/_/\/_/ <br />
+                    </nobr></a><br/>
+
+
+                </div>
+                C:\Users\Clement><a><a href="http://x.c-p.me/r/a_0.1.0.zip"> a_0.1.0</a><br/>24/03/18 (Base)<br/></a></br>
+
+            C:\Users\Clement> list all /release</br>
+
+        </br><a><a href="http://x.c-p.me/r/a_0.1.4.zip">a_0.1.4 </a> > 25/03/18 (Fonctionnality Added)<br/></a>
+
+    <a><a href="http://x.c-p.me/r/a_0.1.5.zip"> a_0.1.5 </a> > 26/03/18 (Clean Code)<br/></a>
+
+    <a><a href="http://x.c-p.me/r/a_0.1.6.zip"> a_0.1.6 </a> > 26/03/18 (Desktop Added)<br/></a>
+
+    <a><a href="http://x.c-p.me/r/a_0.1.7.zip"> a_0.1.7 </a> > 26/03/18 (CV + Some Fix)<br/></a>
+
+    <a><a href="http://x.c-p.me/r/a_0.1.8.zip"> a_0.1.8 </a> > 26/03/18 (Start Menu Added + S fix)<br/></a>
+
+    <a><a> a_0.1.9 </a> > 06/07/18 S Fix (no release)<br/></a>
+
+    <a><a> a_0.2.0 </a> > 10/07/18 Desktop got some changes and fix / custom .htaccess with w95 look / "My Documents" added / "Icon" & "Shortcuts" changes / Adding two audio files on Desktop / "Recycle bin" added.. dont know why.. Release not available for download yet<br/></a>
+    <br/>
+
+    C:\Users\Clement><textarea name="text" class="textbox" cols="5" rows="5">_
+    </textarea>
+    </div>
+</div>
+</div>
+
+<!-- PAGE INFOS -->
+
+<div class='fenetrecp3' id='ouep' ontouchstart>
+    <div class='inner'>
+        <header class='bar'>
+            <h1>Infos & Credits</h1>
+            <div class='buttons'>
+                <a class='minimize' onclick="ouais('ouep');yulu('info')"></a>
+            </div>
+        </header>
+        <div class="credits">
+            Sur l'idée originale de <a href="https://twitter.com/nightwaveplaza?lang=fr">@nightwaveplaza</a> et la base de <a href="https://codepen.io/supember/pen/BKmgNZ">Liam Reilly</a>.
+        </div>
+        <div class="credits2">
+            Copyright © 2018 POMMERIE Clément.<br/>
+        </div>
+    </div>
+</div>
+<!-- CSGO POPUP -->
+
+<div class='fenetrecp4' id='csgo' ontouchstart>
+    <div class='inner'>
+        <header class='bar'>
+            <h1>System Error</h1>
+            <div class='buttons'>
+                <a class='minimize' onclick="ouais('csgo')"></a>
+            </div>
+        </header>
+        <div class="error"><a>
+            The program can't start because steam_api.dll is missing from your computer. Try reinstalling the program to fix this problem.</a>
+        </div>
+    </div>
+</div>
+<!-- BARRE WINDOWS-->
+<div class="toolbar">
+    <input type="checkbox" id="start-menu" />
+    <div  class="lesel"><label for="start-menu" class="start-button">
+        <span></span> Start
+        </label></div>
+    <div class="startbar">
+        <div class="caca">
+            <b>rien</b>
+        </div>
+        <div id="gros" class="grosse"  onclick="yulu('lagrosse'); yulu('gros')">
+            <b> c-p.exe</b>
+        </div>
+        <div id="mini" class="petitefenetre"  onclick="yulu('hide'); yulu('mini')">
+            <b>CMD.exe C:\..</b>
+        </div>
+        <div id="info" class="infos"  onclick="ouais('ouep');yulu('info')">
+            <b>Infos & Crédits</b>
+        </div>
+        <div id="docss" class="doci"  onclick="ouais('mydocuments');yulu('docss')">
+            <b>My Documents</b>
+        </div>
+
+    </div>
+    <div class="start-menu">
+        <div class="workstation">
+            <div>Windows 95</div>
+        </div>
+
+        <div onclick="location.href='http://www.facebook.com/clement.pom'" class="aucune">
+            <li class="classe" >            <div id="cs" ><img class="abdel" src="images/Facebook.png" height="10px">
+                <a>Facebook</a></li></div><div onclick="location.href='http://www.instagram.com/clement.po'" class="aucune">
+        <li class="classe" >            <div id="cs" ><img class="abdel" src="images/insta.png" height="10px">
+            Instagram</li></div><div onclick="location.href='https://dribbble.com/clementpo'" class="aucune">
+        <li class="classe" >            <div id="cs" ><img class="abdel" src="images/dribbble.png" height="10px">
+            Dribbble</li></div>
+
+        <div onclick="yulu('lagrosse')">
+            <li class="classe" style="cursor: not-allowed"><img class="abdel" src="images/internet_explorer5-3.png" height="10px">   Internet explorer</li></div>
+        <div onclick="on()">
+            <li class="chut"><img class="abdel" src="images/icon-46.png" height="10px">   Restart...</li></div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,1677 @@
+
+/* README : 90% Du code a était codé a la main, mais tout le reste a était recuperé sur des 
+morceaux de codes recupérés en lignes, comme les -webkit ou les boxshadow. */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+/* ^^^^^^^^^^^^^  BOUTONS WINDOWS ^^^^^^^^^^^^^^^ */
+body, html {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x:hidden;
+    background-color: #008080;
+    background-imagez: url(../images/1854803b4c0e39ca5cfa283b3dbd4c0c.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    align-content: flex-start;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    font-size: 11px;
+    line-height: 11px;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* ------------------ BARRE WINDOWS & RACOURCIS ------------------- */
+.textbox{
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    text-transform:uppercase;
+    border: 0px;
+    background-color: black;
+    color: white;
+
+    overflow: hidden;
+    resize: none;
+    width: 100px;
+    height: 15px;
+}
+.toolbar {
+    z-index: 100;
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #B8B8B8;
+    border-top: 1px solid #d2d2d2;
+    box-shadow: 0 -1px 0 #ebebeb;
+}
+.toolbar .start-button {
+    float: left;
+    margin-top: 2px;
+    margin-left: 2px;
+    position: absolute;
+    height: 90%;
+    padding: 5px 10px;
+    line-height: 1.25;
+    background-color: #B8B8B8;
+    float: left;
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.toolbar .start-button:hover{
+    background-color: darkgrey;
+    cursor: pointer;
+}
+.toolbar .start-button span {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 5px 0 0;
+    background-image: url("http://mentalsociety.com/wp-content/uploads/2017/02/win95.png");
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    float: left;
+}
+.toolbar .start-menu {
+    display: none;
+}
+.toolbar #start-menu {
+    display: none;
+}
+.toolbar #start-menu:checked ~ .start-menu {
+    margin: 0px;
+    margin-top: 0;
+    position: absolute;
+    display: block;
+    padding: 0px;
+    bottom: 40px;
+    width: 205px;
+    background-color: #B8B8B8;
+    border-right: 2px solid #666;
+    border-left: 2px solid #999;
+    border-top: 2px solid #999;
+    border-bottom: 2px solid #666;
+    overflow: hidden;
+}
+.classe{
+
+    display:flex; 
+    list-style-type: none;
+    top : 0px;
+    margin-left: 20px;
+    padding: 15px;
+    padding-left: 30px;
+    cursor:pointer; 
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    border-width: 1px;
+    border-style: ridge;
+    border-bottom: none;
+    border-right: none;
+}
+
+
+.chut{
+    display:flex; 
+    list-style-type: none;
+    top : 0px;
+    margin-left: 20px;
+    padding: 15px;
+    padding-left: 30px;
+    cursor:pointer; 
+    color: black;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    border-width: 1px;
+    border-style: ridge;
+    border-bottom: none;
+    border-right: none;
+}
+.chut:hover{
+    background: #00007d;
+    color: white;
+    font-weight: bold;
+    cursor:pointer; 
+}
+.pdf{
+    text-decoration-line: none;
+    color: black;
+}
+.pdf:hover{
+    background: #00007d;
+    color: white;
+    font-weight: bold;
+    cursor:pointer; 
+}
+.classe:hover{
+    background: #00007d;
+    color: white;
+    font-weight: bold;
+    cursor:pointer; 
+}
+.abdel{
+    margin-right: 10px;
+    height: 15px;
+    width: auto;
+}
+
+.toolbar #start-menu:checked ~ .start-menu .workstation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background-image: linear-gradient(0deg, blue, black);
+    float: left;
+    z-index: 0;
+}
+.toolbar #start-menu:checked ~ .start-menu .workstation > div {
+    position: relative;
+    color: white;
+    transform: rotate(270deg);
+    transform-origin: left bottom 0;
+    white-space: nowrap;
+    font-size: 2em;
+    left: 22px;
+    top: 215px;
+}
+.caca{
+    margin-top: 2px;
+    display: block;
+    float: left;
+    width: 80px;
+}
+.enhaut{
+    width: 10px;
+    margin-right: 5px;
+}
+#mini {
+    margin-top: 2px;
+    display: none;
+    float: left;
+    text-decoration: none;
+    color: black;
+    margin-left: 0px;
+    width: 155px;
+    height: 35px;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 11px;
+    padding-right: 15px;
+    background-image: url("../images/scrnsave_100.ico");
+    background-size: auto 70%;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+}
+#mini:hover {
+    background-color: darkgrey;
+}
+#docss{
+
+    margin-top: 2px;
+    float: left;
+    text-decoration: none;
+    color: black;
+    width: 165px;
+    height: 35px;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 11px;
+    padding-left: 3px;
+    padding-right: 15px;
+    background-image: url("../images/folder.ico");
+    background-size: auto 70%;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+}
+.doci{    display: none;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;}
+
+.petitefenetre {
+    display: none;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#gros{
+    margin-top: 2px;
+    display: none;
+    float: left;
+    text-decoration: none;
+    color: black;
+    width: 100px;
+    height: 35px;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 11px;
+    padding-right: 15px;
+    background-image: url("../images/internet_explorer5-3.png");
+    background-size: auto 70%;
+    background-position: 5% 50%;
+    background-repeat: no-repeat;
+    margin-left: 5px;
+}
+#gros:hover {
+    background-color: darkgrey;
+}
+
+.grosse {
+    display: none;
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#info{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    float: right;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    width: 153px;
+    height: 38px;
+    text-align: right;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    padding: 11px;
+    padding-right: 11px;
+    background-image: url("../images/systray_306.ico");
+    background-size: auto 70%;
+    background-position: 2% 50%;
+    background-repeat: no-repeat;
+    font-weight: 800;
+    opacity: 0.70;
+    -webkit-box-shadow: inset -2px -2px 0 0 white, inset 1px 1px 0 0 , inset -2px -2px 0 0 white, inset 0px 0px 0 0 #dedcde
+}
+#info:hover {
+    cursor: pointer;
+    background-color: darkgrey;
+}
+.infos {
+    border-top: 2px solid #cac6cb;
+    border-left: 2px solid #cac6cb;
+    border-right: 2px solid #cac6cb;
+    border-bottom: 2px solid #cac6cb;
+}
+
+.browsing{
+    border-width: 2px;
+}
+.compris button{
+    margin-left: 43%;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.credits{
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.credits2{
+    background-color: darkgrey;
+    text-align: center;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 20px;
+    margin-left: 2px;
+    margin-top: 10px;
+}
+
+/* ------------------ CSGO------------------- */
+
+.fenetrecp4 {
+    top: 25%;
+    right: 35%;
+    float: inherit;
+    display: none;
+    position: absolute;
+    z-index: 120;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height:90px;
+    margin-top: 10%;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+.error{
+    text-align: justify;
+    margin: 10px;
+    font-size: 1.2em;
+    line-height: 20px;
+}
+.fenetrecp4 .inner {
+    width: 100%;
+    height: 100%;
+    background: #cac6cb;
+    padding: 3px;
+}
+.fenetrecp4 .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.fenetrecp4 .bar:hover {
+    cursor: move;
+}
+.fenetrecp4 .bar h1 {
+    padding-left: 5px;
+    font-weight: 700;
+}
+.fenetrecp4 .bar .buttons a {
+    color: #464147;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    background: #cac6cb;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.fenetrecp4 .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.fenetrecp4 .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+/* ------------------ INFOS & CREDITS ------------------- */
+
+.fenetrecp3 {
+    top: 25%;
+    right: 35%;
+    float: inherit;
+    display: none;
+    position: absolute;
+    z-index: 120;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height:110px;
+    margin-top: 10%;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+
+.fenetrecp3 .inner {
+    width: 100%;
+    height: 100%;
+    background: #cac6cb;
+    padding: 3px;
+}
+.fenetrecp3 .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.fenetrecp3 .bar:hover {
+    cursor: move;
+}
+.fenetrecp3 .bar h1 {
+    padding-left: 5px;
+    font-weight: 700;
+}
+.fenetrecp3 .bar .buttons a {
+    color: #464147;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    background: #cac6cb;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.fenetrecp3 .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.fenetrecp3 .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+
+/* ------------------ DOWNLOADS & LINKS(cmd) ------------------- */
+
+.fenetrecp2 {
+    overflow: hidden;
+    background-color: black;
+    position: absolute;
+    top:10px;
+    z-index: 1;
+    right: 50px;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 530px;
+    margin-top: 3%;
+    margin-right: 50px;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+.fenetrecp2 img{
+    opacity: 0.80;
+    margin-left: 1px;
+}
+.fenetrecp2 img:hover{
+    opacity: 0.40;
+}
+
+.fenetrecp2 .inner {
+    width: 100%;
+    height: 100%;
+    float: left;
+
+    -webkit-box-shadow: inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 GREY;
+    background-position: center;
+}
+.fenetrecp2 .bar {
+    display: flex;
+    margin-left: 2px;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 22px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.fenetrecp2 .bar h1 {
+    padding-left: 5px;
+    font-weight: 700;
+}
+.fenetrecp2 .bar .buttons a {
+    color: #464147;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.fenetrecp2 .bar:hover{
+    cursor: move;
+}
+.fenetrecp2 .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.fenetrecp2 .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+.fenetrecp2 .menu ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 1px 0;
+    background: #cac6cb;
+    border-bottom-style: ridge;
+    border-bottom-width: 1px;
+
+}
+.fenetrecp2 .menu a {
+    cursor: default;
+    display: block;
+    padding: 4px 6px 5px;
+    color: #464147;
+    text-decoration: none;
+    background: #cac6cb;
+}
+.fenetrecp2 .menu a:first-letter {
+    text-decoration: underline;
+}
+
+/* ------------------ PAGE PRINCIPALE ------------------- */
+@media only screen and (max-width: 1920px){
+    .fenetrecp { width: 90%; }
+}
+.fenetrecp {
+    position: relative;
+    display:none;
+    z-index: 2;
+    resize: both;
+    overflow: hidden;
+    width: 85%;
+    height: 90%;
+    max-width: 1440px;
+    max-height: 1400px;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+.fenetrecp .bar:hover{
+    cursor: move;
+}
+.wesh {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 1920px;
+    padding: 1px;
+}
+.fenetrecp .inner {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -1px -1px 0 0 #a099a1, inset 1px 1px 0 0 white;
+    background: #cac6cb;
+    padding: 3px;
+}
+.fenetrecp .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.fenetrecp .bar h1 {
+    padding-left: 5px;;
+    font-weight: 700;
+}
+.fenetrecp .bar .buttons {
+    display: -webkit-box;
+    display: flex;
+}
+.fenetrecp .bar .buttons a {
+    color: #464147;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    border: 0;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.fenetrecp .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.fenetrecp .bar .buttons a.close:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.fenetrecp .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+.fenetrecp .bar .buttons a.maximize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    opacity: 0.3;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #464147;
+    border-top-width: 2px;
+}
+.fenetrecp .bar .buttons a.close:before, .fenetrecp .bar .buttons a.close:after {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -1px;
+    width: 2px;
+    height: 8px;
+    background: #464147;
+}
+.fenetrecp .bar .buttons a.close:before {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+.fenetrecp .bar .buttons a.close:after {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.fenetrecp .menu ul {
+    display: flex;
+    padding: 1px;
+}
+.fenetrecp .menu a {
+    display: block;
+    padding: 4px 6px 5px;
+    color: #464147;
+    text-decoration: none;
+}
+.fenetrecp .menu a:first-letter {
+    text-decoration: underline;
+}
+.fenetrecp .container {
+    position: relative;
+    height: calc(95%);
+}
+.fenetrecp .content {
+    height: calc(100% - 24px);
+}
+.fenetrecp .content .content-section {
+    opacity: 0;
+    will-change: opacity, z-index;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.fenetrecp .menu-input, .fenetrecp .menu-label {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: calc(20% - 2px);
+    height: 22px;
+}
+.fenetrecp .menu-input:nth-of-type(1), .fenetrecp .menu-label:nth-of-type(1) {
+    left: 0;
+}
+.fenetrecp .menu-input:nth-of-type(2), .fenetrecp .menu-label:nth-of-type(2) {
+    left: calc(20% + 0.5px);
+}
+.fenetrecp .menu-input:nth-of-type(3), .fenetrecp .menu-label:nth-of-type(3) {
+    left: calc(40% + 1px);
+}
+.fenetrecp .menu-input:nth-of-type(4), .fenetrecp .menu-label:nth-of-type(4) {
+    left: calc(60% + 1.5px);
+}
+.fenetrecp .menu-input:nth-of-type(5), .fenetrecp .menu-label:nth-of-type(5) {
+    left: calc(80% + 2px);
+}
+.bouton{
+    text-decoration-line: none;
+    color: black;
+}
+.fenetrecp .menu-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+    z-index: 4;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.fenetrecp .menu-input {
+    opacity: 0;
+    display: block;
+    z-index: 3;
+    margin: 0;
+}
+.fenetrecp .menu-input:checked + label {
+    background-color: white;
+    background-image: linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0), linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0);
+    background-size: 2px 2px;
+    background-position: 0 0, 1px 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+    box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+}
+
+
+.oui{
+    line-height: 1.5em;
+    text-transform: uppercase;
+    font-family: 'VT323', monospace;
+    margin-top: 2px;
+    margin-left: 7px;
+    color: white;
+    font-weight: 800;
+    font-size: 1.2em;
+}
+.oui a{
+    text-decoration-line: none;
+    color: green;
+}
+
+.icon1{ 
+    position: absolute;
+    z-index: 1;
+    top:0px;
+    left: 0px;
+    display: table;
+    height: 50%;
+    width: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.icon1:hover{
+    cursor: pointer;
+}
+.icon1, img{
+    width: 70px;
+    height: auto; 
+}
+.icon2{ 
+    position: absolute;
+    z-index: 1;
+    top:0px;
+    left: 90px;
+    display: table;
+    height: 50%;
+    width: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.icon2:hover{
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 1920px){
+    ..documents { width: 90%; }
+}
+.fenetrecp2 {
+    overflow: hidden;
+    background-color: black;
+    position: absolute;
+    top:10px;
+    z-index: 1;
+    right: 50px;
+    width: 100%;
+    height: 100%;
+    max-width: 800px;
+    max-height: 530px;
+    margin-top: 3%;
+    margin-right: 50px;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+
+.fenetrecp {
+    position: absolute;
+    display:none;
+    z-index: 2;
+    resize: both;
+    overflow: hidden;
+    width: 85%;
+    height: 90%;
+    max-width: 100;
+    max-height: 1400px;
+    padding: 1px;
+    top:0;
+    left: 0;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+
+
+.documents {
+    position: absolute;
+    display:none;
+    z-index: 30;
+    resize: both;
+    overflow: hidden;
+    width: 45%;
+    height: 50%;
+    max-width: 1440px;
+    max-height: 1400px;
+    padding: 1px;
+    top:15%;
+    left: 10%;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+.documents .bar:hover{
+    cursor: move;
+}
+.wesh {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    max-height: 1920px;
+    padding: 1px;
+}
+.documents .inner {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -1px -1px 0 0 #a099a1, inset 1px 1px 0 0 white;
+    background: #cac6cb;
+    padding: 3px;
+}
+.documents  .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.documents .bar h1 {
+    padding-left: 5px;;
+    font-weight: 700;
+}
+.documents .bar .buttons {
+    display: -webkit-box;
+    display: flex;
+}
+.documents .bar .buttons a {
+    color: #464147;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    border: 0;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.documents .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.documents .bar .buttons a.close:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.documents .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+.documents .bar .buttons a.maximize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    opacity: 0.3;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #464147;
+    border-top-width: 2px;
+}
+.documents .bar .buttons a.close:before, .documents .bar .buttons a.close:after {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -1px;
+    width: 2px;
+    height: 8px;
+    background: #464147;
+}
+.documents .bar .buttons a.close:before {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+.documents .bar .buttons a.close:after {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.documents .menu ul {
+    display: flex;
+}
+.documents .menu a {
+    display: block;
+    padding: 6px 6px 5px;
+    color: #464147;
+    text-decoration: none;
+}
+.documents .menu a:first-letter {
+    text-decoration: underline;
+}
+.documents .container {
+    border: 1;
+    position: relative;
+    height: calc(95%);
+}
+.documents .content {
+    height: calc(100% - 24px);
+}
+.documents .content .content-section {
+    opacity: 0;
+    will-change: opacity, z-index;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.documents.menu-input, .fenetrecp .menu-label {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: calc(20% - 2px);
+    height: 22px;
+}
+.documents .menu-input:nth-of-type(1), .fenetrecp .menu-label:nth-of-type(1) {
+    left: 0;
+}
+.documents .menu-input:nth-of-type(2), .fenetrecp .menu-label:nth-of-type(2) {
+    left: calc(20% + 0.5px);
+}
+.documents .menu-input:nth-of-type(3), .fenetrecp .menu-label:nth-of-type(3) {
+    left: calc(40% + 1px);
+}
+.documents .menu-input:nth-of-type(4), .fenetrecp .menu-label:nth-of-type(4) {
+    left: calc(60% + 1.5px);
+}
+.documents .menu-input:nth-of-type(5), .fenetrecp .menu-label:nth-of-type(5) {
+    left: calc(80% + 2px);
+}
+.bouton{
+    text-decoration-line: none;
+    color: black;
+}
+.documents .menu-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+    z-index: 4;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.documents .menu-input {
+    opacity: 0;
+    display: block;
+    z-index: 3;
+    margin: 0;
+}
+.documents .menu-input:checked + label {
+    background-color: white;
+    background-image: linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0), linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0);
+    background-size: 2px 2px;
+    background-position: 0 0, 1px 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+    box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+}
+.beta{
+    font-weight: 800;
+    color: green;
+}
+.back{
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0px;
+}
+
+.troplong{
+    margin-top: 4px
+}
+
+
+
+/* ------------------ SHUTDOWN SCREEN ------------------- */
+
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #008080;
+    z-index: 200; 
+}
+
+
+.shutdown {
+    top: 25%;
+    right: 35%;
+    float: inherit;
+    display: block;
+    position: absolute;
+    z-index: 120;
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
+    max-height:160px;
+    margin-top: 10%;
+    padding: 1px;
+    -webkit-box-shadow: inset -2px -2px 0 0 #464147, inset 2px 2px 0 0 black, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -2px -px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px 5px 1 1 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+
+.shutdown .inner {
+    width: 100%;
+    height: 100%;
+    background: #cac6cb;
+    padding: 3px;
+}
+
+
+.shutdown .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.shutdown .bar h1 {
+    padding-left: 5px;;
+    font-weight: 700;
+}
+
+.shutdown .bar:hover {
+    cursor: move;
+}
+.fenetrecp3 .bar h1 {
+    padding-left: 5px;
+    font-weight: 700;
+}
+.shutdown .inner .user1:first-letter {
+    text-decoration: underline;
+}
+.shutdown .inner .user2:first-letter {
+    text-decoration: underline;
+}
+.user{
+    margin-top: 15px;
+}
+.user a{
+
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+.user1 {
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 10px;
+    display: block;
+    float: left;
+    display: block;
+    padding-bottom: 5px
+}
+.user1 a{
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.user2 a{
+    margin-bottom: 10px;
+    margin-right: 16px;
+}
+.user2 {
+    margin-left: 10px;
+    display: block;
+    margin-left: 10px;
+    float: left;
+    display: block;
+    padding-bottom: 5px
+}
+.shut{
+    float:right;
+    overflow: hidden;
+    resize: none;
+    width: 150px;
+    height: 25px;
+    background-color: white;
+    -webkit-box-shadow: inset -2px -2px 0 0 white, inset 1px 1px 0 0 , inset -2px -2px 0 0 white, inset 2px 2px 0 0 #dedcde
+
+}
+.shutdown img{
+    margin-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    width: 60px;
+    float: left;
+    display: block;
+}
+.restart{
+
+    margin-top: 10px;
+    margin-left: 60px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor:pointer;
+    width: 80px;
+    height: 25px; 
+}
+.restarte{
+    margin-top: 10px;
+    margin-right: 13px;
+    margin-top: 10px;
+    margin-left: 60px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    width: 80px;
+    height: 25px; 
+    right: 5px;
+    float: right;
+}
+.restart:hover{
+    background-color: darkgray;
+}
+.restarte:hover{
+    background-color: darkgray;
+}
+
+.abdel a:first-letter {
+    text-decoration: underline;
+}
+
+/* ------------------ Setup (paint) ------------------- */
+
+.shalom{
+    position: absolute;
+    width: 100%;
+    height: 97%;
+    left: 0px;
+    top: 0px;
+}
+.setup {
+    position: relative;
+    display:none;
+    z-index: 30;
+    resize: both;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    max-width: 740px;
+    max-height: 569px;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+
+.setup .bar:hover{
+    cursor: move;
+}
+.setup .inner {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -1px -1px 0 0 #a099a1, inset 1px 1px 0 0 white;
+    background: #cac6cb;
+    padding: 3px;
+}
+.setup  .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.setup.bar h1 {
+    padding-left: 5px;;
+    font-weight: 700;
+}
+.setup .bar .buttons {
+    display: -webkit-box;
+    display: flex;
+}
+.setup .bar .buttons a {
+    color: #464147;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    border: 0;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.setup .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.setup .bar .buttons a.close:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.setup .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+.setup .bar .buttons a.maximize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #464147;
+    border-top-width: 2px;
+}
+.setup .bar .buttons a.close:before, .setup .bar .buttons a.close:after {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -1px;
+    width: 2px;
+    height: 8px;
+    background: #464147;
+}
+.setup .bar .buttons a.close:before {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+.setup .bar .buttons a.close:after {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.setup .menu ul {
+    display: flex;
+}
+.setup .menu a {
+    display: block;
+    padding: 6px 6px 5px;
+    color: #464147;
+    text-decoration: none;
+}
+.setup .menu a:first-letter {
+    text-decoration: underline;
+}
+.setup .container {
+    border: 1;
+    position: relative;
+    height: calc(95%);
+}
+.setup .content {
+    height: calc(100% - 24px);
+}
+.setup .content .content-section {
+    opacity: 0;
+    will-change: opacity, z-index;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.setup .menu-input, .setup .menu-label {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: calc(20% - 2px);
+    height: 22px;
+}
+.bouton{
+    text-decoration-line: none;
+    color: black;
+}
+.setup .menu-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+    z-index: 4;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.setup .menu-input {
+    opacity: 0;
+    display: block;
+    z-index: 3;
+    margin: 0;
+}
+.setup .menu-input:checked + label {
+    background-color: white;
+    background-image: linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0), linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0);
+    background-size: 2px 2px;
+    background-position: 0 0, 1px 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+    box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+}
+
+.gif{
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    width: 90%;
+    height: auto;
+}
+.paint{
+    margin-top: 5px;
+    width: 60%;
+}
+.paint2{
+    margin-top: 0px;
+    float: left;
+    margin-right: 3px;
+}
+
+
+/* ------------------ Notepad (help) ------------------- */
+
+.notepad {
+
+    position: relative;
+    display:none;
+    z-index: 30;
+    resize: both;
+    width: 100%;
+    height: 100%;
+    max-width: 740px;
+    max-height: 569px;
+    padding: 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+.notepad .bar:hover{
+    cursor: move;
+}
+.notepad .inner {
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -1px -1px 0 0 #a099a1, inset 1px 1px 0 0 white;
+    background: #cac6cb;
+    padding: 3px;
+}
+.notepad  .bar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-between;
+    height: 18px;
+    padding: 2px;
+    background: linear-gradient(to right, #00007d,#00007d, #558cfe);
+    color: white;
+}
+.notepad.bar h1 {
+    padding-left: 5px;;
+    font-weight: 700;
+}
+.notepad .bar .buttons {
+    display: -webkit-box;
+    display: flex;
+}
+.notepad .bar .buttons a {
+    color: #464147;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 2px;
+    width: 14px;
+    height: 14px;
+    padding: 0;
+    padding-bottom: 10px;
+    border: 0;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.notepad .bar .buttons a.minimize:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.notepad .bar .buttons a.close:hover{
+    background-color: darkgray;
+    cursor: pointer;
+}
+.notepad .bar .buttons a.minimize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 4px;
+    width: 6px;
+    height: 2px;
+    background: #464147;
+}
+.notepad .bar .buttons a.maximize:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #464147;
+    border-top-width: 2px;
+}
+.notepad .bar .buttons a.close:before, .notepad .bar .buttons a.close:after {
+    -webkit-transform-origin: center center;
+    transform-origin: center center;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -4px;
+    margin-left: -1px;
+    width: 2px;
+    height: 8px;
+    background: #464147;
+}
+.notepad .bar .buttons a.close:before {
+    -webkit-transform: rotateZ(-45deg);
+    transform: rotateZ(-45deg);
+}
+.notepad .bar .buttons a.close:after {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+.notepad .menu ul {
+    display: flex;
+}
+.notepad .menu a {
+    display: block;
+    padding: 2px 6px 5px;
+    color: #464147;
+    text-decoration: none;
+}
+.notepad .menu a:first-letter {
+    text-decoration: underline;
+}
+.notepad .container {
+
+    padding-left: 10px;
+    background-color: white;
+    overflow:auto;
+    border: 1;
+    position: relative;
+    height: calc(93%);
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
+}
+.notepad .content {
+
+    height: calc(100% - 24px);
+}
+.notepad .content .content-section {
+    opacity: 0;
+    will-change: opacity, z-index;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.notepad .menu-input, .notepad .menu-label {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    width: calc(20% - 2px);
+    height: 22px;
+}
+.bouton{
+    text-decoration-line: none;
+    color: black;
+}
+.notepad .menu-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 1px;
+    z-index: 4;
+    background: #cac6cb;
+    -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+    box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
+}
+.notepad .menu-input {
+    opacity: 0;
+    display: block;
+    z-index: 3;
+    margin: 0;
+}
+.notepad .menu-input:checked + label {
+    background-color: white;
+    background-image: linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0), linear-gradient(45deg, #efeef0 25%, transparent 25%, transparent 75%, #efeef0 75%, #efeef0);
+    background-size: 2px 2px;
+    background-position: 0 0, 1px 1px;
+    -webkit-box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+    box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
+}
+
+.use{
+
+    background-color: white;
+    font-size: 1.5em;
+    line-height: 20px;
+
+}
+strong{
+    font-weight:bold;}
+
+
+
