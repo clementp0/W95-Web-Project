@@ -1,0 +1,246 @@
+body {
+}
+.popup{
+    margin: 0px;
+    display: block;
+    height: 70px;
+    width: auto;
+    position: relative;
+    bottom: -10px;
+    right: 0px;
+    margin-right: 45px;
+}
+.closepop{
+    border-radius: 2px;
+    border-width:1px;
+    border-color: grey;
+    border-style: solid;
+    float: right;
+    height: 13px;
+    width:13px;
+    font-size: 1em;
+    text-align: center;
+    padding: 0px;
+    color: grey;
+    position: absolute;
+    z-index: 10000;
+    right: 0px;
+    opacity: 0.7;
+    margin-top: 18px;
+    margin-right: 55px;
+    cursor: pointer;
+    line-height: 12px;
+}
+.attpop0{
+    display: none;
+
+}
+.attpop{
+    width: 15px;
+    right: 50px;
+    bottom: 10px;
+}
+.attpop2{
+    display: none;
+}
+#info{
+    width: 75px;
+    height: 30px;
+}
+.toolbar{
+    height: 32px;
+}
+#time{
+    padding: 0px;
+    bottom: 11px;
+    right: 10px;
+    position: absolute;
+}
+.toolbar .start-button{
+    line-height: 0L8;
+    padding: 3px 7px;
+    margin-left: 0px;
+    margin-top: 1px;
+}
+.toolbar .start-button span{
+    width: 16px;
+    height: 17px;
+    margin-left: 0px;
+}
+.toolbar #start-menu:checked ~ .start-menu {
+    bottom: 33px;
+}
+#mini>b {
+    display: none;
+}
+#mini {
+    width: 30px;
+    height: 28px;
+    margin-top: 1px;
+    background-size: auto 90%;
+    background-position: 50% 50%;
+}
+#docss>b {
+    display: none;
+}
+#docss{
+    width: 30px;
+    height: 28px;
+    margin-top: 1px;
+    background-size: auto 90%;
+    background-position: 50% 50%;
+}
+#gros>b {
+    display: none;
+}
+#gros{
+    margin-left: 0px;
+    width: 30px;
+    height: 28px;
+    margin-top: 1px;
+    background-size: auto 90%;
+    background-position: 50% 50%;
+}
+.caca{
+    width: 75px;
+}
+.fenetrecp2{
+    height: 70%;
+    font-size: 0.8em;
+    top: 0px;
+    right: 0px;
+    margin-right: 0px;
+    margin: 0px;
+    margin-top: 10px;
+    max-height: none;
+    max-width: none;
+
+}
+pre{
+    display: none;
+}
+.documents{
+    width: auto;
+    height: 75%;
+    top:7%;
+    left: 7%;
+}
+.notepad{
+    margin-bottom: 5px;
+    top: 10px;
+    position: absolute;
+    height: 87%;
+    width: 94%;
+    left: 3px;
+    max-height: none;
+}
+.fenetrecp{
+    width: 96%;
+    margin: 5px;
+}
+.icon1, img{
+    width: 60px
+}
+.icon2{
+    left: 75px;
+}
+.icon2, img{
+    width: 60px;
+}
+.inconr > div > a > img{
+    width: 67px;
+}
+
+/* ------------------ Contact form ------------------- */
+.shutdown{
+    top :2%;
+    bottom: 45px;
+    left: 0px;
+    height: fit-content;
+    max-width: 390px;
+    margin: 0px;
+}
+.name{
+    float: left;
+    font-size: 1.1em;
+}
+.namet{
+    -webkit-box-shadow: inset -1px -1px 0 0 #dedcde, inset 1px 1px 0 0 white, inset 2px 2px 0 0 #dedcde;
+    height: 2em;
+    width: 100%;
+    float: right;
+}
+.city{
+    float: left;
+    font-size: 1.1em;}
+.cityt{
+    -webkit-box-shadow: inset -1px -1px 0 0 #dedcde, inset 1px 1px 0 0 white, inset 2px 2px 0 0 #dedcde;
+    height: 2em;
+    width:100%;
+    float: right;
+}
+
+.email{
+    font-size: 1.1em;
+    float: left;
+}
+.emailt{  
+    -webkit-box-shadow: inset -1px -1px 0 0 #dedcde, inset 1px 1px 0 0 white, inset 2px 2px 0 0 #dedcde;
+    height: 2em;
+    width: 100%;
+    float: right;
+
+}
+.msg{ 
+    font-size: 1.1em;
+    float: left;
+    clear: both;
+}
+.msgt{
+    -webkit-box-shadow: inset -1px -1px 0 0 #dedcde, inset 1px 1px 0 0 white, inset 2px 2px 0 0 #dedcde;
+    float: right;
+    width: 100%;
+    height: 100%;
+}
+.smail{
+    float: right;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor:pointer;
+    width: 80px;
+    height: 25px; 
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.restart{
+    float: left;
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor:pointer;
+    width: 80px;
+    height: 25px; 
+    border-top: 2px solid white;
+    border-left: 2px solid white;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+
+form{
+    line-height: 2.5em;
+    margin: auto;
+    padding: 5px;
+}
+.boutonnn{
+ background-color: transparent;
+    border-color: grey;
+    border-width: 1px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.1em;
+}

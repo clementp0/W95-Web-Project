@@ -1,0 +1,25 @@
+  </main>
+
+  <footer>
+    <i></i>
+  </footer>
+  
+  <script>
+  
+    (function(){
+    
+      var parent = document.querySelector('tr:not(.indexhead)');
+      parent.classList.add('parent');
+
+      // Make all the icon links unfocusable with tab
+      var icolinks = document.querySelectorAll('.indexcolicon a');
+      [].forEach.call(icolinks, function(link) {
+
+        link.setAttribute('tabindex', '-1');
+
+      });
+      
+    })();
+    
+  </script>
+  

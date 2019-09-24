@@ -1,0 +1,132 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: white;
+  margin: 0;
+  color: #404040;
+  font-size: 10px;
+  font-family: Tahoma, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  margin: 0 auto;
+  padding-top: 0px;
+  max-width: 100%;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tbody {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+tr {
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
+  cursor: pointer;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+tr.parent {
+  font-weight: 100;
+}
+
+tr.indexhead {
+	display: none;
+}
+
+tr td {
+  display: flex;
+  padding: 0;
+}
+
+td.indexcolname a {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+td.indexcollastmod,
+td.indexcolsize {
+  display: none;
+}
+
+td a {
+	color: darkslategrey;
+	text-decoration: none;
+  padding: 8px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  flex: 1;
+}
+
+img {
+  width: 75%;
+  height: 100%;
+}
+
+footer {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px;
+  color: #9099A3;
+}
+
+
+
+
+
+@media only screen and (min-width: 320px) {
+  main {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  main {
+    max-width: 95%;
+  }
+}
+
+
+@media only screen and (min-width: 640px) {
+  main {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main {
+    max-width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main {
+    max-width: 95%;
+  }
+}

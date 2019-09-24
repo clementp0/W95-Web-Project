@@ -1,212 +1,126 @@
 <!DOCTYPE html>
 <html lang="fr" >
     <head>
-        <meta charset="UTF-8">
+        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" >
+        <meta name="google-site-verification" content="SZFcUTVqFOF7Q1OKfU2pfUhjv4lRAb-6YDQHBHPczGM" />
         <title>W95 I Clément POMMERIE</title>
 
         <!-- LINKS -->
         <link href="https://fonts.googleapis.com/css?family=VT323">
         <link rel="stylesheet" href="css/style2.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
         <link rel="icon" href="images/Icon_40.ico" />
+        <link media="only screen and (max-device-width: 915px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
 
-        <!-- FLEMME DE FAIRE UN FICHIER JS A COTE -->
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <!-- PWA -->
+
+        <link rel="manifest" href="/js/manifest.json" />
+        <script defer src="/js/site.js"></script>
+        <script defer src="/js/crypto.js"></script>
+        <script defer src="/js/main.js"></script>
+
+
+        <!-- MARABOUCHE PIK ! -->
 
         <style>
             #draggable { width: 150px; height: 150px; padding: 0.5em; }
         </style>
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 
         <!-- FENETRE DRAGGABLES / BORDEL -->
 
+        <link rel="manifest" href="/manifest.json" />
+        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
         <script>
-
-            function on() {
-                document.getElementById("overlay").style.display = "block";
-            }
-
-            function off() {
-                document.getElementById("overlay").style.display = "none";
-            }
-
-            function play() {
-                var audio = document.getElementById('audio1');
-                if (audio.paused) {
-                    audio.play();
-                }else{
-                    audio.pause();
-                    audio.currentTime = 1
-                }
-            }
-            function titou() {
-                var audio = document.getElementById('audio2');
-                if (audio.paused) {
-                    audio.play();
-                }else{
-                    audio.pause();
-                    audio.currentTime = 1
-                }
-            }
-            function scar() {
-                var audio = document.getElementById('audio3');
-                if (audio.paused) {
-                    audio.play();
-                }else{
-                    audio.pause();
-                    audio.currentTime = 1
-                }
-            }
-            
-            $( function() {
-                $( ".fenetrecp" ).draggable();
-            } );
-            $( function() {
-                $( ".fenetrecp2" ).draggable();
-            } );
-            $( function() {
-                $( ".fenetrecp3" ).draggable();
-            } );
-            $( function() {
-                $( ".fenetrecp4" ).draggable();
-            } );
-            $( function() {
-                $( ".documents" ).draggable();
-            } );
-
-            $( function() {
-                $( "#site" ).draggable();
-            } );
-
-            $( function() {
-                $( ".setup" ).draggable();
-            } );
-
-            $( function() {
-                $( ".notepad" ).draggable();
-            } );
-
-
-            function yolo(id) {
-
-                var divelement = document.getElementById(id);
-
-                if(divelement.style.display == 'none')
-                    divelement.style.display = 'block';
-                else
-                    divelement.style.display = 'none';
-            }
-            function yulu(id) {
-
-                var divelement = document.getElementById(id);
-
-                if(divelement.style.display == 'block')
-                    divelement.style.display = 'none';
-                else
-                    divelement.style.display = 'block';
-            }
-            function smj(id) {
-
-                var divelement = document.getElementById(id);
-
-                if(divelement.style.display == 'none')
-                    divelement.style.display = 'block';
-                else
-                    divelement.style.display = 'none';
-            }
-            function ouais(id){
-
-                var divelement = document.getElementById(id);
-
-                if(divelement.style.display == 'none')
-                    divelement.style.display = 'block';
-                else
-                    divelement.style.display = 'none';
-            }
-            function prout(id){
-
-                var divelement = document.getElementById(id);
-
-                if(divelement.style.display == 'none')
-                    divelement.style.display = 'block';
-                else
-                    divelement.style.display = 'none';
-            }
-            function ouep(id){
-
-                var divelement = document.getElementById(id);
-
-                if(divelement.style.display == 'none')
-                    divelement.style.display = 'block';
-                else
-                    divelement.style.display = 'none';
-            }
-
-
+            var OneSignal = window.OneSignal || [];
+            OneSignal.push(function() {
+                OneSignal.init({
+                    appId: "77021bea-dfa6-455b-9d0f-3ab559cc4a1b",
+                });
+            });
         </script>
     </head>
     <body>
         <div id="overlay">
-            
-            
-            <div class='shutdown' ontouchstart>
+            <div class='shutdown'id="feedback" ontouchstart>
                 <div class='inner'>
-
                     <header class='bar'>
-                        <h1>Welcome to Windows</h1>
+                        <h1>Send Feedback</h1>
                     </header>
-                    <img src="images/mprserv_120.ico" alt="putain je me fais chié">
-                    <div class="us er">
-                        <a> Type a user name and password to log on to Windows.<input type="button" value="OK" class="restart" onclick="off()"></a>
+                    <div id="contact-area">
+
+                        <form method="post" action="contactengine.php">
+                            <label class="name" for="Name">Name:</label>
+                            <input class="namet" type="text" name="Name" id="Name" />
+
+                            <label class="city"f or="City">Device:</label>
+                            <input class="cityt" type="text" name="City" id="City" />
+
+                            <label class="email" for="Email">Email:</label>
+                            <input class="emailt" type="text" name="Email" id="Email" />
+
+                            <label class="msg" for="Message">Message:</label><br />
+                            <textarea class="msgt" name="Message" rows="20" cols="20" id="Message"></textarea>
+
+                            <input class="smail" type="submit" name="submit" value="Submit" class="submit-button" />
+
+                            <input type="button" value="Cancel" class="restart" onclick="off()">
+
+                        </form>
                     </div>
-                    <input type="button" value="Cancel" class="restarte" onclick="location.href='http://www.google.com'">
-                    <div class="user1">
-                        <a>  User name: </a><textarea name="" class="shut" cols="5" rows="5">Clement Pommerie
-                        </textarea><br/>
-                    </div>
-                    <div class="user2">
-                        <a> Password: </a><textarea name="" type="password" class="shut" cols="5" rows="5"></textarea><br/>
-                    </div>
+
                 </div>
             </div>
         </div>
         <!-- BON BAH LA YA RIEN DE SPECIAL -->
         <div class="icon1">
 
-            <div id="site" onclick="yulu('lagrosse')"><a><img src="images/dzd.png" alt="putain je me fais chié" height="150px"></a></div>
+            <div id="site" onclick="yulu('lagrosse')"><a><img src="images/Icons/ie.png" alt="image" height="150px"></a></div>
 
-            <div ><a href="http://x.c-p.me/cv.pdf" target='_blank'><img src="images/cv.png" alt="putain je me fais chié" height="150px"></a>
-            </div>
-
-            <div id="doc" onclick="prout('mydocuments')"><a><img src="images/documents.png" alt="documents" height="150px"></a>
+            <div ><a href="https://x.clpo.net/Desktop/cv.pdf" target='blank'><img src="images/Icons/cv.png" alt="image" height="150px"></a>
             </div>
 
-            <div id="cs" onclick="ouais('csgo')"><a><img src="images/steamworkshop_guide_1390621568_guide_branding.png" alt="putain je me fais chié" height="150px"></a>
+            <div id="doc" onclick="prout('mydocuments')"><a><img src="images/Icons/docs.png" alt="documents" height="150px"></a>
             </div>
-            <div id="cs" onclick="ouais('setup')" ><a><img src="images/setup.png" alt="putain je me fais chié" height="150px"></a>
-            </div>
-            <div id="cs"  ><a href="https://www.epicgames.com/fortnite/fr/buy-now/battle-royale"><img src="images/corb.png" alt="putain je me fais chié" height="150px"></a>
+
+            <!--<div id="cs" onclick="ouais('csgo')"><a><img src="images/steamworkshop_guide_1390621568_guide_branding.png" alt="image" height="150px"></a>
+</div> -->
+            <!--<div id="cs" onclick="ouais('setup')" ><a><img src="images/setup.png" alt="image" height="150px"></a>
+</div> -->
+            <div id="cs"  ><a href="https://www.epicgames.com/fortnite/fr/buy-now/battle-royale" target="_blank"><img src="images/Icons/Poubelle.png" alt="image" height="150px"></a>
             </div>
 
         </div>
         <div class="icon2">
-            <div id="cs" onClick="play()"><a><img src="images/ic3peak.png" alt="putain je me fais chié" height="150px"><audio id="audio1" src="THIS%20WORLD%20IS%20SICK.mp3"></audio></a>
+            <div id="cs" onClick="ouais('notepad')" ><a><img src="images/Icons/Read.png" alt="image" height="150px"></a>
             </div>
-            <div id="cs" onClick="titou()"><a><img src="images/6ix.png" alt="putain je me fais chié" height="150px"><audio id="audio2" src="Official%20Music%20Video.mp3"></audio></a>
+            <div id="cs"  onClick="ouais('achievement')"><a><img src="images/Icons/achievements.png" alt="image" height="150px"></a>
             </div>
-            <div id="cs" onClick="scar()"><a><img src="images/scar.png" alt="putain je me fais chié" height="150px"><audio id="audio3" src="scarlxrd%20-%20BRAINDEAD.mp3"></audio></a>
+            <div id="cs"  ><a href="mailto:clement.pommerie@gmail.com"><img src="images/Icons/Mail.png" alt="image" height="150px"></a>
             </div>
-            <div id="cs" onClick="ouais('notepad')" ><a><img src="images/help.png" alt="putain je me fais chié" height="150px"></a>
+
+        </div>
+        <div class="inconr">
+            <div id="cs" onClick="play()" style="cursor: pointer;"><a><img src="images/ic3peak.png" alt="image" height="150px"><audio id="audio1" src="Desktop/THIS%20WORLD%20IS%20SICK.mp3"></audio></a>
             </div>
-            <div id="cs"  ><a href="mailto:clement.pommerie@gmail.com"><img src="images/mail.png" alt="putain je me fais chié" height="150px"></a>
+            <div id="cs" onClick="titou()"style="cursor: pointer;"><a><img src="images/6ix.png" alt="image" height="150px"><audio id="audio2" src="Desktop/Official%20Music%20Video.mp3"></audio></a>
             </div>
+            <div id="cs" onClick="scar()" style="cursor: pointer;"><a><img src="images/scar.png" alt="image" height="150px"><audio id="audio3" src="Desktop/scarlxrd%20-%20BRAINDEAD.mp3"></audio></a>
+            </div>
+        </div>
+        <div class="icon3" id="icon3">
+            <div><div class="closepop" onclick="popo('icon3')">x</div><img class="popup" src="images/popupback.png"></div>
+
         </div>
 
         <div class='fenetrecp' id="lagrosse">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/internet_explorer5-3.png"> C-P Clement Pommerie - Microsoft Internet Explorer</h1>
+                    <h1><img class="enhaut" src="images/internet_explorer5-3.png">Wikileaks.com- Microsoft Internet Explorer</h1>
                     <div class='buttons'>
                         <a class='minimize' onclick="smj('lagrosse'); yulu('gros')"></a>
                         <a class='maximize'></a>
@@ -228,7 +142,7 @@
                 </nav>
                 <div class='container'>
                     <div class='content'>
-                        <iframe name="wesh" class='wesh' src ="http://c-p.me/" width="1440px" height="920px"></iframe>
+                        <iframe is="x-frame-bypass" name="wesh" class='wesh' src ="https://wikileaks.org/" width="1440px" height="920px"></iframe>
                     </div>
                 </div>
             </div>
@@ -268,7 +182,7 @@
                 </nav>    
                 <div class='container'>
                     <div class='content'>
-                        <iframe name="wesh" class='wesh' src ="http://x.c-p.me/documents" width="1440px" height="1220px"></iframe>
+                        <iframe name="wesh" class='wesh' src ="https://x.clpo.net/Documents" width="1440px" height="1220px"></iframe>
                     </div>
                 </div>
             </div>
@@ -302,7 +216,6 @@
                     <div class='watermark'>
                         <img class="paint2" src="images/paint2.png">
                         <img class="shalom" src="images/notyet.png">
-                        <img class="gif" src="images/gif.gif">
                         <img class="paint" src="images/paint.png">
 
                     </div>
@@ -340,27 +253,91 @@
                             <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;"><strong>Microsoft Windows 95 README for General Information</strong></span></p>
                             <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;"><strong>August 2018</strong></span></p>
                             <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;">-------------------------------------------------------------------------------------</span></p>
-                            <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;">(c) <strong>Pommerie Cl&eacute;ment, 2018</strong> c-p.me</span></p>
+                            <p style="text-align: center;"><span style="font-family: arial, helvetica, sans-serif;">(c) <strong>Pommerie Cl&eacute;ment, 2019</strong> clpo.net</span></p>
                             <p style="text-align: left;">-----------------------------------</p>
                             <p style="text-align: left;"><strong>How to use this website</strong></p>
                             <p style="text-align: left;">-----------------------------------</p>
                             <ul>
-                                <li style="text-align: left;">● This website is not my "real" website. You can visit the "real one" on<strong> c-p.me</strong></li>
                                 <li style="text-align: left;">● This website in still in Alpha, and not representative of the finished product.</li>
-                                <li style="text-align: left;"><span style="text-decoration: underline;">DO NOT USE ON MOBILE PHONE, TABLET, OR ANY DEVICE WITH LOW RESOLUTION OR LESS THAN 16:9 ASPECT RATIO.</span><strong> You will encounter a lot of bug.&nbsp;<br /></strong>Minimum Requirement (for full experience) : 1336x768px or higher</li>
-                                <li style="text-align: left;">● This website is just an overlay of my "real website" with an file browsing system, and some useless fonctionnalites.</li>
+                                <li style="text-align: left;"><span style="text-decoration: underline;">● SINCE BETA 1, You can use my web-site on mobile phone.</span><strong> You will encounter a lot of bug.&nbsp;<br /></strong>Minimum Requirement (for full experience) : 1336x768px or higher</li>
                                 <li style="text-align: left;">● All music files located on the desktop are <strong>propriety of their exclusive owners.</strong></li>
                             </ul>
                             <p style="text-align: left;">-----------------------------------</p>
                             <p style="text-align: left;"><strong>Comment utiliser ce site </strong></p>
                             <p style="text-align: left;">-----------------------------------</p>
                             <ul class="ul">
-                                <li>● Ce site web n'est pas mon "vrai" site web. Vous pouvez visiter le "vrai" sur <strong>c-p.me</strong></li>
                                 <li style="text-align: left;">● Ce site est encore en Alpha, et n'est pas repr&eacute;sentatif du produit fini.</li>
-                                <li style="text-align: left;"><span style="text-decoration: underline;">● NE PAS UTILISER SUR UN T&Eacute;L&Eacute;PHONE MOBILE, UNE TABLETTE OU UN DISPOSITIF PR&Eacute;SENTANT UNE FAIBLE R&Eacute;SOLUTION OU UN RAPPORT D'ASPECT INF&Eacute;RIEUR &Agrave; 16: 9.</span> <strong><strong>Vous rencontrerez beaucoup de bug.<br /></strong></strong>Minimum requis (pour l'exp&eacute;rience compl&egrave;te): 1336x768px ou plus</li>
-                                <li style="text-align: left;">● Ce site est juste une superposition de mon "vrai site" avec un syst&egrave;me de navigation de fichiers, et quelques fonctionnalit&eacute;s inutiles.</li>
-                                <li style="text-align: left;">● Les trois fichiers musicaux situ&eacute;s sur le bureau sont la <strong>propri&eacute;t&eacute; de leurs propri&eacute;taires exclusif.</strong></li>
+                                <li style="text-align: left;"><span style="text-decoration: underline;">● DEPUIS LA BETA 1 ce site est compatible avec les téléphones.</span> <strong><strong>Vous rencontrerez beaucoup de bug.<br /></strong></strong>Minimum requis (pour l'exp&eacute;rience compl&egrave;te): 1336x768px ou plus</li>
+                                <li style="text-align: left;">● Les trois fichiers musicaux situ&eacute;s sur le bureau sont la <strong>propri&eacute;t&eacute; de leurs créateurs.</strong></li>
                             </ul></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class='achievement' id="achievement">
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/Icons/welcome_16928.ico">Achievements - Skills</h1>
+                    <div class='buttons'>
+                        <a class='close' onclick="smj('achievement')"></a>
+                    </div>
+                </header>
+                <nav class='menu'>
+                    <ul>
+                        <li>
+                            <a class="troplong">File</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Edit</a>
+                        </li>
+                        <li>
+                            <a class="troplong">Help</a>
+                        </li>
+                    </ul>
+                </nav>    
+                <div class='container'>
+                    <div class='content'>
+                        <a class="skills"><p class="titrea">------------------------</br>ACHIEVEMENTS</br>------------------------</p><p><h2>DESIGN :</h2></br></br>
+Illustrator : 6 years </br>
+Photoshop : 5 years </br>
+Sketch : 1 year </br>
+Invision : 2 years </br></br>
+
+<h2>GRADUATION :</h2></br></br>
+
+BEP : ARTISANAT ET MÉTIERS D'ART OPTION
+COMMUNICATION VISUELLE PLURIMÉDIA</br>
+BAC : ARTISANAT ET MÉTIERS D'ART OPTION
+COMMUNICATION VISUELLE PLURIMÉDIA</br>
+BACHELOR 3 : CHEF DE
+PROJET DIGITAL - ECV DIGITAL</br>
+TOEIC BRIDGE : 72/90 & 84/90</br></br>
+
+<h2>CYBERSECURITY :</h2></br></br>
+Root-me.org score : 170 (web-servers)</br>
+- HTTP OPEN Redirect </br>
+-  HTTP - User Agent</br>
+-  Weak Password</br>
+-  Backup file</br>
+-  HTTP - Directory Indexing</br>
+-  HTTP - Header</br>
+-  HTTP - POST</br>
+-  HTTP - Improper redirect</br>
+-  HTTP - Cookies </br></br>
+
+Wireless attack (Airmon-ng & Aircrack-ng)</br>
+Web server audit (Nikto)</br>
+Man-in-the-middle (Wireshark)</br>
+Dns Spoof (Dnschief & Ettercap)</br>
+Phishing SE (Socialfish)</br>
+SQL Injection (Havij)</br>
+Payloads (Armitage, Metasploit, Netcat, Shellter)</br>
+Port scanning (Nmap)</br></br>
+
+Last achievement : </br></br>
+
+- Get a remote shell on a mac,by spoofing MAC OS Trusted app (payload).</p></a>
                     </div>
                 </div>
             </div>
@@ -377,38 +354,49 @@
                         <a class='minimize' onclick="yolo('hide'); yulu('mini')"></a>
                     </div>
                 </header>
-                <div class="oui">Microsoft Windows [Version 5.2.3790]<br/><C> Copyright 1985-2003 Microsoft Corp.</br>
-                    C:\Users\Clement> Start<div class="beta"><nobr> ______     ______      __    __     ______        ______     ______     ______   ______    <br />
-                    /\  ___\   /\  == \    /\ "-./  \   /\  ___\      /\  == \   /\  ___\   /\__  _\ /\  __ \   <br />
-                    \ \ \____  \ \  _-/    \ \ \-./\ \  \ \  __\      \ \  __<   \ \  __\   \/_/\ \/ \ \  __ \  <br />
-                    \ \_____\  \ \_\       \ \_\ \ \_\  \ \_____\     \ \_____\  \ \_____\    \ \_\  \ \_\ \_\ <br />
-                    \/_____/   \/_/        \/_/  \/_/   \/_____/      \/_____/   \/_____/     \/_/   \/_/\/_/ <br />
-                    </nobr></a><br/>
+                <div class="beta">
+                    Microsoft Windows [Version 5.2.3790]<br/><C> Copyright 1985-2003 Microsoft Corp.</br>
+                    <pre>
+ ______     __  __     ______     __   __     ______     ______        __         ______     ______    
+/\  ___\   /\ \_\ \   /\  __ \   /\ "-.\ \   /\  ___\   /\  ___\      /\ \       /\  __ \   /\  ___\   
+\ \ \____  \ \  __ \  \ \  __ \  \ \ \-.  \  \ \ \__ \  \ \  __\      \ \ \____  \ \ \/\ \  \ \ \__ \  
+ \ \_____\  \ \_\ \_\  \ \_\ \_\  \ \_\\"\_\  \ \_____\  \ \_____\     \ \_____\  \ \_____\  \ \_____\ 
+  \/_____/   \/_/\/_/   \/_/\/_/   \/_/ \/_/   \/_____/   \/_____/      \/_____/   \/_____/   \/_____/ 
 
+</pre>
 
                 </div>
-                C:\Users\Clement><a><a href="http://x.c-p.me/r/a_0.1.0.zip"> a_0.1.0</a><br/>24/03/18 (Base)<br/></a></br>
+                <div class="oui" id="terminal">
+                    C:\Users\Clement><a><a href="https://x.clpo.net/Release/a_0.1.0.zip"> a_0.1.0</a><br/>24/03/18 (Base)<br/></a></br>
 
-            C:\Users\Clement> list all /release</br>
+                C:\Users\Clement> list all /Release</br>
 
-        </br><a><a href="http://x.c-p.me/r/a_0.1.4.zip">a_0.1.4 </a> > 25/03/18 (Fonctionnality Added)<br/></a>
+            </br><a><a href="https://x.clpo.net/Release/a_0.1.4.zip">a_0.1.4 </a> > 25/03/18 (Fonctionnality Added)<br/></a>
 
-    <a><a href="http://x.c-p.me/r/a_0.1.5.zip"> a_0.1.5 </a> > 26/03/18 (Clean Code)<br/></a>
+        <a><a href="https://x.clpo.net/Release/a_0.1.5.zip"> a_0.1.5 </a> > 26/03/18 (Clean Code)<br/></a>
 
-    <a><a href="http://x.c-p.me/r/a_0.1.6.zip"> a_0.1.6 </a> > 26/03/18 (Desktop Added)<br/></a>
+        <a><a href="https://x.clpo.net/Release/a_0.1.6.zip"> a_0.1.6 </a> > 26/03/18 (Desktop Added)<br/></a>
 
-    <a><a href="http://x.c-p.me/r/a_0.1.7.zip"> a_0.1.7 </a> > 26/03/18 (CV + Some Fix)<br/></a>
+        <a><a href="https://x.clpo.net/Release/a_0.1.7.zip"> a_0.1.7 </a> > 26/03/18 (CV + Some Fix)<br/></a>
 
-    <a><a href="http://x.c-p.me/r/a_0.1.8.zip"> a_0.1.8 </a> > 26/03/18 (Start Menu Added + S fix)<br/></a>
+        <a><a href="https://x.clpo.net/Release/a_0.1.8.zip"> a_0.1.8 </a> > 26/03/18 (Start Menu Added + S fix)<br/></a>
 
-    <a><a> a_0.1.9 </a> > 06/07/18 S Fix (no release)<br/></a>
+        <a><a> a_0.1.9 </a> > 06/07/18 S Fix (no release)<br/></a>
 
-    <a><a> a_0.2.0 </a> > 10/07/18 Desktop got some changes and fix / custom .htaccess with w95 look / "My Documents" added / "Icon" & "Shortcuts" changes / Adding two audio files on Desktop / "Recycle bin" added.. dont know why.. Release not available for download yet<br/></a>
-    <br/>
-
-    C:\Users\Clement><textarea name="text" class="textbox" cols="5" rows="5">_
-    </textarea>
+        <a><a> a_0.2.0 </a> > 10/07/18 Desktop got some changes and fix / custom .htaccess with w95 look / "My Documents" added / "Icon" & "Shortcuts" changes / Adding two audio files on Desktop / "Recycle bin" added.. dont know why..<br/></a>
+        <a><a href=""> a_0.2.1 </a> > 17/12/18 Setup.exe added / SEND MAIL ADDED / CSGO.EXE REMOVED / README.TxT ADDED / DOMAIN NAME <br/></a>
+        <a><a href=""> a_0.2.2 </a> > 31/01/19 Setup.exe removed / CSGO.EXE REMOVED / infos popup added<br/></a>
+        </br>
     </div>
+<input type="button" name="answer" value="Show previous Releases >" onclick="showDiv()" id="show_more" class="boutonnn"/>
+<div id="beta_1">RELEASE : BETA 1 IS OUT ! <br/><br/>
+    - PWA (Progressive Web App) <a style="color: green">    js/manifest.json</a><br/> - Cache management (Service Worker)<a style="color: green">    "w95B1" js/sw.js</a><br/> - Push Notification added to keep you updated <a style="color: green">    OneSignalSDKWorker.js</a><br/> - Mobile / Tab Version <a style="color: green">    css/mobile.css</a><br/> - Iframe now target Wikileaks<br/> - You can now "install" my web-site on your mobile phone (AND/IOS) using "add to home screen"<br/> - Restart option removed <br/> - Feedback option added <br/> ----------------------- <br/>
+    - Notification compatibility list : G-Chrome / Android Browser / EDGE<br/>
+    - Mobile Version compatibility list : S10 / S9 / S8 / S6 / A6 / iPad / iPX / <br/>
+    - Screen ration compatibility list : From 4:3 up to 21:9
+    <br/> ----------------------- <br/>
+    Please send me some FEEDBACK using the "start" menu
+</div>
 </div>
 </div>
 
@@ -417,7 +405,7 @@
 <div class='fenetrecp3' id='ouep' ontouchstart>
     <div class='inner'>
         <header class='bar'>
-            <h1>Infos & Credits</h1>
+            <h1>Infos & Credits </h1>
             <div class='buttons'>
                 <a class='minimize' onclick="ouais('ouep');yulu('info')"></a>
             </div>
@@ -435,16 +423,54 @@
 <div class='fenetrecp4' id='csgo' ontouchstart>
     <div class='inner'>
         <header class='bar'>
-            <h1>System Error</h1>
+            <h1>System Error - Missing .dll library</h1>
             <div class='buttons'>
                 <a class='minimize' onclick="ouais('csgo')"></a>
             </div>
         </header>
         <div class="error"><a>
-            The program can't start because steam_api.dll is missing from your computer. Try reinstalling the program to fix this problem.</a>
+            The program can't start because steam_api.dll is missing from your computer. Try reinstalling the program to fix this problem or add my <a href="https://steamcommunity.com/id/Hydra_0ne/">steam</a>. </a>
         </div>
     </div>
 </div>
+
+<div class='porfolio' id="porfolio">
+    <div class='inner'>
+        <header class='bar'>
+            <h1><img class="enhaut" src="images/folder.ico">Portfolio - C:\</h1>
+            <div class='buttons'>
+                <a class='minimize' onclick="smj('mydocuments'); yulu('docss')"></a>
+                <a class='maximize'></a>
+                <a class='close' onclick="smj('mydocuments')"></a>
+            </div>
+        </header>
+        <div class='container'>
+            <div class='content'>
+                <div id="slideshowContainer">
+                    <div id="slideshow"> 
+                        <img src="images/Portfolio/Book-1.jpg" />
+                        <img src="images/Portfolio/Book-2.jpg" />
+                        <img src="images/Portfolio/Book-3.png" />
+                        <img src="images/Portfolio/Book-4.png" />
+                        <img src="images/Portfolio/Book-5.jpg" />
+                        <img src="images/Portfolio/Book-6.jpg" />
+                        <img src="images/Portfolio/Book-7.jpg" />
+                        <img src="images/Portfolio/Book-8.jpg" />
+                        <img src="images/Portfolio/Book-9.jpg" />
+                        <img src="images/Portfolio/Book-10.jpg" />
+                    </div>
+
+                    <div id="nav">
+                        <div id="prev"><a title="previous">&#60;</a></div>
+                        <div id="next"><a title="next">&#62;</a></div>
+                    </div><!--nav-->
+                </div><!--slideshowContainer-->
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- BARRE WINDOWS-->
 <div class="toolbar">
     <input type="checkbox" id="start-menu" />
@@ -461,14 +487,19 @@
         <div id="mini" class="petitefenetre"  onclick="yulu('hide'); yulu('mini')">
             <b>CMD.exe C:\..</b>
         </div>
-        <div id="info" class="infos"  onclick="ouais('ouep');yulu('info')">
-            <b>Infos & Crédits</b>
+        <div id="info" class="infos"  on//click="ouais('ouep');yulu('info')">
+            <div id="time"></div>
         </div>
         <div id="docss" class="doci"  onclick="ouais('mydocuments');yulu('docss')">
             <b>My Documents</b>
         </div>
+        <img class ="attpop0" src="images/systray_300.ico">
+        <img class ="attpop" src="images/icwdial_101.ico">
+        <img class ="attpop2" src="images/confcp_116.ico">
 
     </div>
+
+
     <div class="start-menu">
         <div class="workstation">
             <div>Windows 95</div>
@@ -483,9 +514,9 @@
             Dribbble</li></div>
 
         <div onclick="yulu('lagrosse')">
-            <li class="classe" style="cursor: not-allowed"><img class="abdel" src="images/internet_explorer5-3.png" height="10px">   Internet explorer</li></div>
+            <li class="classe" ><img class="abdel" src="images/internet_explorer5-3.png" height="10px">   Internet explorer</li></div>
         <div onclick="on()">
-            <li class="chut"><img class="abdel" src="images/icon-46.png" height="10px">   Restart...</li></div>
+            <li class="chut"><img class="abdel" src="images/icon-46.png" height="10px">   Feedback...</li></div>
     </div>
 </div>
 </body>
