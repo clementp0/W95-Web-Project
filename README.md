@@ -1,4 +1,4 @@
-# w95project
+# Windows 95 - Web project
 Trying to recreate w95 experience, using only html/css and less js as possible.
 
 This project was initialised summer 2018, to create an "virtual environment".
@@ -23,3 +23,10 @@ Feel free to send feedback about your experience on my website.
 - Popup Added
 - Iframe now target wikileaks
 - Feedback form in the StartMenu
+
+Service Worker : 
+https://developers.google.com/web/fundamentals/primers/service-workers/
+Notification System : 
+https://onesignal.com/
+
+❤️ Clementp0
