@@ -1,5 +1,8 @@
 body {
 }
+.tutoriel{
+    display: none;
+}
 .popup{
     margin: 0px;
     display: block;
@@ -70,10 +73,10 @@ body {
 .toolbar #start-menu:checked ~ .start-menu {
     bottom: 33px;
 }
-#mini>b {
+#smallone>b {
     display: none;
 }
-#mini {
+#smallone {
     width: 30px;
     height: 28px;
     margin-top: 1px;
@@ -101,7 +104,7 @@ body {
     background-size: auto 90%;
     background-position: 50% 50%;
 }
-.caca{
+.iconbar{
     width: 75px;
 }
 .fenetrecp2{
@@ -237,10 +240,26 @@ form{
     padding: 5px;
 }
 .boutonnn{
- background-color: transparent;
+    background-color: transparent;
     border-color: grey;
     border-width: 1px;
     color: white;
     font-weight: 600;
     font-size: 1.1em;
+}
+
+#github{
+    opacity: 0.75;
+    -webkit-box-shadow: inset -1px -2px 0 0 white, inset 1px 1px 0 0, inset -1px 1px 0 0 white, inset 1px 0px 0 0 #dedcde;
+    float: right;
+    margin-right: 1px;
+    padding: 3px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    float: right;
+}
+#github > a > img{
+    width: 53px;
 }

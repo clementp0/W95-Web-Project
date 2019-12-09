@@ -2,6 +2,9 @@
     box-sizing: border-box;
 }
 /* ^^^^^^^^^^^^^  BOUTONS WINDOWS ^^^^^^^^^^^^^^^ */
+
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
 body, html {
     height: 100%;
     width: 100vw;
@@ -29,6 +32,7 @@ body {
     line-height: 11px;
     padding: 0px;
     margin: 0px;
+    overflow: hidden;
 }
 
 .icon1 > div:hover{
@@ -213,7 +217,7 @@ body {
     border-bottom: 2px solid #666;
     overflow: hidden;
 }
-.classe{
+.iconcontainer{
 
     display:flex; 
     list-style-type: none;
@@ -264,13 +268,13 @@ body {
     font-weight: bold;
     cursor:pointer; 
 }
-.classe:hover{
+.iconcontainer:hover{
     background: #00007d;
     color: white;
     font-weight: bold;
     cursor:pointer; 
 }
-.abdel{
+.iconmenu{
     margin-right: 10px;
     height: 15px;
     width: auto;
@@ -296,7 +300,7 @@ body {
     left: 22px;
     top: 215px;
 }
-.caca{
+.iconbar{
     margin-top: 2px;
     display: block;
     float: left;
@@ -306,9 +310,9 @@ body {
     width: 10px;
     margin-right: 5px;
 }
-#mini {
+#smallone {
     margin-top: 2px;
-    display: none;
+    display: block;
     float: left;
     text-decoration: none;
     color: black;
@@ -323,10 +327,10 @@ body {
     padding-right: 15px;
     background-image: url("../images/scrnsave_100.ico");
     background-size: auto 70%;
-    background-position: 5% 50%;
+    background-position: 8% 50%;
     background-repeat: no-repeat;
 }
-#mini:hover {
+#smallone:hover {
     background-color: darkgrey;
 }
 #docss{
@@ -355,7 +359,7 @@ body {
     border-right: 2px solid black;
     border-bottom: 2px solid black;}
 
-.petitefenetre {
+.showsmall {
     display: none;
     border-top: 2px solid white;
     border-left: 2px solid white;
@@ -386,7 +390,7 @@ body {
     background-color: darkgrey;
 }
 
-.grosse {
+.showwindow {
     display: none;
     border-top: 2px solid white;
     border-left: 2px solid white;
@@ -544,11 +548,11 @@ body {
     background: #cac6cb;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.fenetrecp4 .bar .buttons a.minimize:hover{
+.fenetrecp4 .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
-.fenetrecp4 .bar .buttons a.minimize:after {
+.fenetrecp4 .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -616,11 +620,11 @@ body {
     background: #cac6cb;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.fenetrecp3 .bar .buttons a.minimize:hover{
+.fenetrecp3 .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
-.fenetrecp3 .bar .buttons a.minimize:after {
+.fenetrecp3 .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -638,6 +642,7 @@ body {
     background-color: black;
     position: absolute;
     top:10px;
+    display: none;
     z-index: 1;
     right: 50px;
     width: 100%;
@@ -699,11 +704,11 @@ body {
 .fenetrecp2 .bar:hover{
     cursor: move;
 }
-.fenetrecp2 .bar .buttons a.minimize:hover{
+.fenetrecp2 .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
-.fenetrecp2 .bar .buttons a.minimize:after {
+.fenetrecp2 .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -806,7 +811,7 @@ body {
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.fenetrecp .bar .buttons a.minimize:hover{
+.fenetrecp .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
@@ -814,7 +819,7 @@ body {
     background-color: darkgray;
     cursor: pointer;
 }
-.fenetrecp .bar .buttons a.minimize:after {
+.fenetrecp .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -1097,7 +1102,7 @@ body {
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.documents .bar .buttons a.minimize:hover{
+.documents .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
@@ -1105,7 +1110,7 @@ body {
     background-color: darkgray;
     cursor: pointer;
 }
-.documents .bar .buttons a.minimize:after {
+.documents .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -1394,7 +1399,7 @@ body {
     background-color: darkgray;
 }
 
-.abdel a:first-letter {
+.iconmenu a:first-letter {
     text-decoration: underline;
 }
 
@@ -1468,7 +1473,7 @@ body {
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.setup .bar .buttons a.minimize:hover{
+.setup .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
@@ -1476,7 +1481,7 @@ body {
     background-color: darkgray;
     cursor: pointer;
 }
-.setup .bar .buttons a.minimize:after {
+.setup .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -1663,7 +1668,7 @@ body {
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.notepad .bar .buttons a.minimize:hover{
+.notepad .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
@@ -1671,7 +1676,7 @@ body {
     background-color: darkgray;
     cursor: pointer;
 }
-.notepad .bar .buttons a.minimize:after {
+.notepad .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -1786,7 +1791,7 @@ body {
     box-shadow: inset -1px -1px 0 0 white, inset 1px 1px 0 0 #464147, inset -2px -2px 0 0 #dedcde, inset 2px 2px 0 0 #cac6cb;
 }
 
-.use{
+.usage{
 
     background-color: white;
     font-size: 1.5em;
@@ -1872,7 +1877,7 @@ strong{
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.achievement .bar .buttons a.minimize:hover{
+.achievement .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
@@ -1880,7 +1885,7 @@ strong{
     background-color: darkgray;
     cursor: pointer;
 }
-.achievement .bar .buttons a.minimize:after {
+.achievement .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -1936,7 +1941,7 @@ strong{
     text-decoration: underline;
 }
 .achievement .container {
-color: white;
+    color: white;
     padding-left: 10px;
     background-color: black;
     overflow:scroll;
@@ -2011,18 +2016,18 @@ color: white;
 
 @import "compass";
 
-#slideshowContainer {
+#slideshowoneContainer {
     max-width: 870px;
     width: 100%;
     margin: 0 auto 0 auto;
     padding: 0;
     z-index: 1000;
 }
-#slideshow {
+#slideshowone {
     padding: 0;
     position: relative;
 }
-#slideshow > img {
+#slideshowone > img {
     margin-top: 5px;
     padding: 0;
     border: 0;
@@ -2082,11 +2087,11 @@ color: white;
     color: #f28;
 }
 
-#slideshow > * {
+#slideshowone > * {
     display: none;
 }
 
-#slideshow > *.first {
+#slideshowone > *.first {
     display: block;
 }
 
@@ -2162,7 +2167,7 @@ color: white;
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
     box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 white, inset -2px -2px 0 0 #a099a1, inset 2px 2px 0 0 #dedcde;
 }
-.porfolio .bar .buttons a.minimize:hover{
+.porfolio .bar .buttons a.smallonemize:hover{
     background-color: darkgray;
     cursor: pointer;
 }
@@ -2170,7 +2175,7 @@ color: white;
     background-color: darkgray;
     cursor: pointer;
 }
-.porfolio .bar .buttons a.minimize:after {
+.porfolio .bar .buttons a.smallonemize:after {
     content: "";
     display: block;
     position: absolute;
@@ -2394,10 +2399,505 @@ form{
 }
 
 .boutonnn{
- background-color: transparent;
+    background-color: transparent;
     border-color: grey;
     border-width: 1px;
     color: white;
     font-weight: 600;
     font-size: 1.1em;
+}
+
+#github{
+    opacity: 0.75;
+    -webkit-box-shadow: inset -1px -2px 0 0 white, inset 1px 1px 0 0, inset -1px 1px 0 0 white, inset 1px 0px 0 0 #dedcde;
+    float: right;
+    margin-right: 1px;
+    padding: 3px;
+    padding-bottom: 6px;
+    margin-top: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
+    float: right;
+}
+#github > a > img{
+    width: 82px;
+}
+
+.tutoriel{
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    -ms-animation: fadein 2s;
+    -o-animation: fadein 2s;
+    animation: fadein 2s;
+    position: absolute;
+    z-index: 101;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(30, 26, 30, 0.65);
+}
+
+.croix{
+    float: right;
+    width: 25px;
+    margin: 15px;
+}
+.git{
+    position: absolute;
+    bottom: 0;
+    right: 260px;
+    float: right;
+}
+.git > img {
+    width: 370px;
+}
+.social{
+    position: absolute;
+    bottom: 50px;
+    left:25px;
+    float: left;
+}
+.social > img {
+    width: 373px;
+}
+.cvp{
+    position: absolute;
+    top: 204px;
+    left: 33px;
+    float: left;
+}
+.cvp > img {
+    height: 60px;
+    width: auto;
+}
+.ach{
+    position: absolute;
+    top: 114px;
+    left: 173px;
+    float: left;
+}
+.ach > img {
+    height: 60px;
+    width: auto;
+}
+.email{
+    top: 334px;
+    left: 123px;
+    float: left;
+}
+.email > img {
+    height: 69px;
+    width: auto;
+}
+
+
+
+.error-error > img {
+    height: 50px;
+    width: auto;
+    padding-left: 10px;
+    margin-left: 0px;
+    margin-top: 4px;
+}
+.errmsg > p{
+    padding-top: 8px;
+    padding-bottom: 7px;
+
+}
+.error-icon{
+    padding-top: 4px;
+    width: auto;
+    height: 14px;
+}
+.error-message{
+    display: none;
+    width:460px;
+    height:125px;
+    background: #BABFC3;
+    overflow:hidden;
+    border: outset 2px;
+    border-bottom-color:#A8A9A8;
+    border-right-color:#A8A9A8;
+    border-top-color:#EAEAEA;
+    border-left-color:#EAEAEA;
+    position:absolute;
+    top:25%;
+    left:20%;
+    z-index:9999;
+}
+.ctrls{
+    opacity: 0;
+    z-index:999999;
+    position:absolute;
+    border: outset 2px;
+    border-bottom-color:#A8A9A8;
+    border-right-color:#A8A9A8;
+    border-top-color:#EAEAEA;
+    border-left-color:#EAEAEA;
+    width:300px;
+    padding:10px;
+    background: #BABFC3;
+    font-size:.9em;
+}
+.error-title{
+    background:#0000A6;
+    color:#fff;
+    overflow:hidden;
+    height:20px;
+    font-size:12px;
+    padding: 2px 4px;
+    padding-top: 1px;
+}
+.error-title{
+    margin:0px 2px;
+    position:relative;
+    top:-2px;
+}
+.error-close{
+    margin-top: 3px;
+    background: #BABFC3;
+    padding: 0px 3px;
+    padding-bottom: 3px;
+    padding-top: -1px;
+    padding-left: 2px;
+    width: 14px;
+    height: 14px;
+    color: dimgrey;
+    float: right;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    top: 0px!important;
+    border: outset 1px;
+    right: -2px;
+    border-bottom-color:#A8A9A8;
+    border-right-color:#A8A9A8;
+    border-top-color:#EAEAEA;
+    border-left-color:#EAEAEA;
+    cursor:default;
+}
+.error-content .error-error{
+    position:relative;
+    float:left;
+    top:50%;
+}
+.errmsg{
+    margin-top: 17px;
+    position: relative;
+    font-size: 12px;
+    font-weight: 100;
+    width: 300px;
+    left: 8px;
+    margin-left: 40px;
+}
+.error-button{
+    font-family:inherit;
+    border: outset 2px;
+    width: 78px;
+    height: 26px;
+    padding: 5px;
+    text-align: center;
+    font-size: 13px;
+    position: relative;
+    left: 368px;
+    margin-bottom: 8px;
+    top: -62px;
+}
+.error-button-a{
+    top: -70px;
+    border-bottom-color: #A8A9A8;
+    border-right-color: #A8A9A8;
+    border-top-color: #EAEAEA;
+    border-left-color: #EAEAEA;
+}
+.error-button-b{
+    top: -16px;
+    left: 65px;
+    border-bottom-color: #A8A9A8;
+    border-right-color: #A8A9A8;
+    border-top-color: #EAEAEA;
+    border-left-color: #EAEAEA;
+}
+.ctrls .error-title{
+    position: relative;
+    top: -9px;
+    left: -10px;
+    width: 103.3%;
+}
+
+.bsod{
+    display: none;
+    position: absolute;
+    z-index: 10000;
+    width: 100vw;
+    height: 100vh;
+}
+.bsod > iframe{
+    pointer-events: none;
+    border: none;
+    height: 100vh;
+    width: 100vw;
+}
+
+
+
+
+
+
+
+
+#screen{
+    display: none;
+}
+#restart, #restart .startup {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: none;
+}
+
+
+#black {
+    background: #000;
+    z-index: 10;
+}
+
+#restart {
+    background: #000;
+    z-index: 200;
+}
+#restart .starting {
+    color: #fff;
+    font-family: monospace;
+    font-size: 16px;
+    padding: 2px;
+}
+#restart .startup {
+    opacity: 0;
+}
+#restart .clouds {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+#restart .logo {
+    position: absolute;
+    left: 160px;
+    top: 72px;
+    width: 320px;
+    height: 280px;
+}
+#restart sup {
+    font-size: 8px;
+}
+#restart h2, #restart h3 {
+    font-family: Arial, sans-serif;
+}
+#restart h2 {
+    position: absolute;
+    font-size: 42px;
+    left: 108px;
+    bottom: 80px;
+    color: white;
+    letter-spacing: 1.2px;
+    line-height: 1ex;
+    z-index: 1;
+}
+#restart h2 em {
+    display: block;
+    text-indent: 22px;
+    font-size: 74px;
+    font-weight: 900;
+    color: #000;
+    letter-spacing: -6px;
+    line-height: 1ex;
+}
+#restart h2 sup {
+    vertical-align: 42px;
+}
+#restart h2 strong {
+    display: inline-block;
+    -webkit-transform: scaleX(1.2);
+    transform: scaleX(1.2);
+    margin-left: -10px;
+    color: #fff;
+    font-weight: normal;
+}
+#restart h3 {
+    position: absolute;
+    right: 0;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 40px;
+    z-index: 1;
+    letter-spacing: -2px;
+    margin-right: .5ex;
+}
+#restart h3 sup {
+    margin-left: 4px;
+}
+#restart .bar {
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    width: 200%;
+    height: 14px;
+    background: linear-gradient(90deg, #47b, #bcd 19%, #bcd 31%, #47b 50%, #bcd 69%, #bcd 81%, #47b);
+    -webkit-animation: barz 2s linear infinite;
+    animation: barz 2s linear infinite;
+}
+
+#restart:target {
+    -webkit-animation: booting .5s 7s 12 forwards;
+    animation: booting .5s 7s 12 forwards;
+}
+#restart:target header {
+    -webkit-animation: booting .5s 12s 12 forwards;
+    animation: booting .5s 13s 12 forwards;
+}
+#restart:target .startup {
+    -webkit-animation: startup-logo 7s linear 12 forwards;
+    animation: startup-logo 7s linear 12 forwards;
+}
+
+@-webkit-keyframes booting {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+    to {
+        -webkit-transform: scale(0.0001);
+        transform: scale(0.0001);
+    }
+}
+
+@keyframes booting {
+    from {
+        -webkit-transform: none;
+        transform: none;
+    }
+    to {
+        -webkit-transform: scale(0.0001);
+        transform: scale(0.0001);
+    }
+}
+@-webkit-keyframes startup-logo {
+    0%, 22% {
+        opacity: 0;
+    }
+    25%, 90% {
+        opacity: 1;
+    }
+    96%, 100% {
+        opacity: 0;
+    }
+}
+@keyframes startup-logo {
+    0%, 22% {
+        opacity: 0;
+    }
+    25%, 90% {
+        opacity: 1;
+    }
+    96%, 100% {
+        opacity: 0;
+    }
+}
+@-webkit-keyframes barz {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+@keyframes barz {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: -100%;
+    }
+}
+#fore-notepad:checked ~ #taskbar #task-notepad, #fore-ie:checked ~ #taskbar #task-ie, #fore-mine:checked ~ #taskbar #task-mine {
+    background: rgba(255, 255, 255, 0.67);
+    font-weight: bold;
+}
+i.clouds {
+    background: url("/images/nuages.svg");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+i.logo {
+    background: url("/images/loadinglogo.png");
+    background-repeat: no-repeat;
+    background-size: cover; 
+    height: 100%;
+    width: 100%;
+
+}
+#open-notepad:checked ~ #app-notepad, #open-ie:checked ~ #app-ie, #open-mine:checked ~ #app-mine {
+    visibility: visible;
+}
+
+#open-notepad:checked ~ #taskbar #task-notepad, #open-ie:checked ~ #taskbar #task-ie, #open-mine:checked ~ #taskbar #task-mine {
+    display: flex;
+}
+
+#fore-notepad:checked ~ #app-notepad, #fore-ie:checked ~ #app-ie, #fore-mine:checked ~ #app-mine {
+    z-index: 3;
+}
+#fore-notepad:checked ~ #app-notepad h2, #fore-ie:checked ~ #app-ie h2, #fore-mine:checked ~ #app-mine h2 {
+    color: #fff;
+    background: #000080;
+}
+
+#task-notepad {
+    display: none;
+}
+
+#task-ie {
+    display: none;
+}
+
+#task-mine {
+    display: none;
+}
+
+i.sm, i.md, i.lg {
+    display: inline-block;
+    pointer-events: none;
+    text-align: center;
+}
+
+i.sm {
+    width: 16px;
+    height: 16px;
+    line-height: 15px;
+}
+
+i.md {
+    width: 24px;
+    height: 24px;
+    position: relative;
+}
+i.md::before, i.md::after {
+    content: '';
+    position: absolute;
+}
+
+i.lg {
+    width: 32px;
+    height: 32px;
+}
+
+.testt{
+    height: 100%;
+    width: 100%;
+    position: absolute
 }

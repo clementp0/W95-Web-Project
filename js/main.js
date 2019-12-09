@@ -81,7 +81,7 @@ function yolo(id) {
     else
         divelement.style.display = 'none';
 }
-function yulu(id) {
+function showone(id) {
 
     var divelement = document.getElementById(id);
 
@@ -99,7 +99,7 @@ function smj(id) {
     else
         divelement.style.display = 'none';
 }
-function ouais(id){
+function showthree(id){
 
     var divelement = document.getElementById(id);
 
@@ -108,7 +108,7 @@ function ouais(id){
     else
         divelement.style.display = 'none';
 }
-function prout(id){
+function showtwo(id){
 
     var divelement = document.getElementById(id);
 
@@ -137,44 +137,44 @@ function popo(id){
 }
 
 
-$('#slideshow > *:first').addClass('active');
+$('#slideshowone > *:first').addClass('active');
 
-$('#slideshowContainer #next').click(function(e) {
+$('#slideshowoneContainer #next').click(function(e) {
     e.preventDefault();
 
-    $('#slideshow > .active').fadeOut('slow');
+    $('#slideshowone > .active').fadeOut('slow');
 
-    var index = $('#slideshow > *.active').index();
+    var index = $('#slideshowone > *.active').index();
 
-    if(index === $('#slideshow > *').size() -1) {
+    if(index === $('#slideshowone > *').size() -1) {
         index = -1;
     }
 
-    $('#slideshow > .active').removeClass('active');
+    $('#slideshowone > .active').removeClass('active');
 
-    var nextSlide = $('#slideshow > *').get(index + 1);  
+    var nextSlide = $('#slideshowone > *').get(index + 1);  
     $(nextSlide).addClass('active');
 
-    $('#slideshow > .active').fadeIn('slow');
+    $('#slideshowone > .active').fadeIn('slow');
 });
 
-$('#slideshowContainer #prev').click(function(e) {
+$('#slideshowoneContainer #prev').click(function(e) {
     e.preventDefault();
 
-    $('#slideshow .active').fadeOut('slow');
+    $('#slideshowone .active').fadeOut('slow');
 
-    var index = $('#slideshow img.active').index();
+    var index = $('#slideshowone img.active').index();
 
     if(index === 0) {
-        index = $('#slideshow img').size();
+        index = $('#slideshowone img').size();
     }
 
-    $('#slideshow .active').removeClass('active');
+    $('#slideshowone .active').removeClass('active');
 
-    var prevSlide = $('#slideshow img').get(index - 1);  
+    var prevSlide = $('#slideshowone img').get(index - 1);  
     $(prevSlide).addClass('active');
 
-    $('#slideshow .active').fadeIn('slow');
+    $('#slideshowone .active').fadeIn('slow');
 });
 
 
@@ -201,10 +201,66 @@ function startTime() {
 startTime();
 
 
-function showDiv() {
+function showoneDiv() {
     document.getElementById('terminal').style.display = "block";
 
     document.getElementById('beta_1').style.display = "none";
 
     document.getElementById('show_more').style.display = "none";
+}
+
+
+
+
+$(document).ready(function(){
+
+    $(document).on('mousemove',function(e){
+        var parentOffset = $('.error-main').offset();
+        var iCount=$('.clone').length;
+        var amount=$('#amountTo').val()-1;
+        var pStyle={'top':e.pageY -10,'left':e.pageX - (448/2)};
+        var cStyle={'top':e.pageY -10,'left':e.pageX - (448/2),'z-index':2};
+        $('.error-main').css(pStyle);
+
+        var gg=$('.error-main').clone().removeClass('error-main').addClass('clone');
+        $(gg).appendTo('body').css(cStyle);
+        $('#amount').html(iCount);
+        $('.clone').each(function(i, elee){
+            if(iCount>amount){
+                $(elee).remove();
+            }
+
+            iCount--;
+        });
+    });
+    $('#chords')[0].play();
+
+});
+
+function justNumbers(e)
+{
+    var keynum = window.event ? window.event.keyCode : e.which;
+    if ((keynum == 8) || (keynum == 46))
+        return true;
+
+    return /\d/.test(String.fromCharCode(keynum));
+}
+
+
+function virus(){
+    document.getElementById('error-message').style.display = 'block';
+}
+function bsod(){
+    window.location.replace("#restart");
+    document.getElementById('bsod').style.display = 'block';
+    setTimeout(location.reload.bind(location), 6000);
+}
+function restart(){
+    document.getElementById('error-message').style.display = 'none';
+    document.getElementById('screen').style.display = 'block';
+    document.getElementById('bsod').style.display = 'none';
+}
+
+function redirect(){
+     window.location.replace("#restart");
 }

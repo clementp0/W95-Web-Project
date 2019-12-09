@@ -1,0 +1,1 @@
+mp_free_armor 0; sv_enablebunnyhopping 1; sv_autobunnyhopping 1; sv_infinite_ammo 1; mp_startmoney 16000; mp_buy_anywhere 1; BOT_kick; mp_warmup_end; mp_restartgame 1 
