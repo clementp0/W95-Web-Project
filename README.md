@@ -10,17 +10,6 @@ to find some people who can help me to dev. this website and add functionalities
 
 Feel free to send feedback about your experience on my website. 
 
-
-## BETA 2 - THE BEGINNING OF A NEW ERA
-
-- Im taking the project more and more seriously, so.. some class/id names needed to be changed. Thats the major point in this release. 
-- Also i added an "Achievements" page.
-- And the link to this github have been modified. One aim to the GitHub itself and the other one to this page, say Hi ! 
-- All the music files as been removed and now only one can be found on the desktop.
-- The README as been sligthy updated. 
-
-- If you are curious you may find some "artifacts" in the code, i'm currently working on some features not included yet ; like a fullscreen mod, a windows crash or even a video player.
-
 ## BETA 1 - THE PWA UPDATE
 
 - Its now a PWA ! progressive web app
@@ -34,6 +23,17 @@ Feel free to send feedback about your experience on my website.
 - Popup Added
 - Iframe now target wikileaks
 - Feedback form in the StartMenu
+
+## BETA 2 - THE BEGINNING OF A NEW ERA
+
+- Im taking the project more and more seriously, so.. some class/id names needed to be changed. Thats the major point in this release. 
+- Also i added an "Achievements" page.
+- And the link to this github have been modified. One aim to the GitHub itself and the other one to this page, say Hi ! 
+- All the music files as been removed and now only one can be found on the desktop.
+- The README as been sligthy updated. 
+
+- If you are curious you may find some "artifacts" in the code, i'm currently working on some features not included yet ; like a fullscreen mod, a windows crash or even a video player.
+
 
 Service Worker : 
 https://developers.google.com/web/fundamentals/primers/service-workers/
