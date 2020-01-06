@@ -34,6 +34,16 @@ Feel free to send feedback about your experience on my website.
 
 - If you are curious you may find some "artifacts" in the code, i'm currently working on some features not included yet ; like a fullscreen mod, a windows crash or even a video player.
 
+## BETA 3 - LOOK AT MY CODE, IM SEXY NOW  
+
+- W3C Css Validator : No error was found ! ✅
+- W3C Html Validator : From ~300 erros to 1 :
+https://validator.w3.org/nu/?doc=https://x.clpo.net/
+- Some Randoms fix
+- ContactEngine.php fixed
+- "required" added to the contact form
+- Massive compression (all images files) - From 24.2% to 64.8% Compression Ratio.
+
 
 Service Worker : 
 https://developers.google.com/web/fundamentals/primers/service-workers/
