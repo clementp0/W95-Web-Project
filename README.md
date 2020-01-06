@@ -71,7 +71,7 @@ Feel free to send feedback about your experience on my website.
 ## BETA 3 - LOOK AT MY CODE, IM SEXY NOW  
 
 - W3C Css Validator : No error was found ! 
-- W3C Html Validator : From ~300 erros to 1 :
+- W3C Html Validator : From ~300 errors to 1 :
 https://validator.w3.org/nu/?doc=https://x.clpo.net/
 - Some Randoms fix
 - ContactEngine.php fixed
