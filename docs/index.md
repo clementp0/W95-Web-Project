@@ -51,4 +51,7 @@ https://developers.google.com/web/fundamentals/primers/service-workers/
 Notification System : 
 https://onesignal.com/
 
+Inline-style: 
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+
 ❤️ Clementp0
