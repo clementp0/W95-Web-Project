@@ -2,6 +2,9 @@
 
 # Windows 95 - Web project
 [BETA 1](#beta-1---the-pwa-update)
+[BETA 2](#beta-2---the-beginning-of-a-new-era)
+[BETA 3](#beta-3---look-at-my-code-im-sexy-now)
+
 Trying to recreate w95 experience, using only html/css and less js as possible.
 
 This project was initialised summer 2018, to create an "virtual environment".
