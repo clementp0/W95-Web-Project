@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html lang="fr" >
+<html lang="en" >
     <head>
-        <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no" >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" >
         <meta name="google-site-verification" content="SZFcUTVqFOF7Q1OKfU2pfUhjv4lRAb-6YDQHBHPczGM" />
-        <title>W95 I Clément POMMERIE</title>
+        <meta name="description" content="  Welcome to my personal website, but also a way to the past inside the well known Windows 95. You will find all the informations you need about me in an old OS." />
+        <title>Windows 95 I Clément POMMERIE</title>
 
         <!-- LINKS -->
-        <link href="https://fonts.googleapis.com/css?family=VT323">
+
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="preload">
         <link rel="stylesheet" href="css/style2.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -24,6 +27,10 @@
         <script defer src="/js/main.js"></script>
         <link rel="manifest" href="/manifest.json" />
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+        <!-- NOTIFICATION -->
+
+
         <script>
             var OneSignal = window.OneSignal || [];
             OneSignal.push(function() {
@@ -34,8 +41,12 @@
         </script>
     </head>
     <body>
+
+        <!-- FEEDBACK / CONTACT FORM -->
+
+
         <div id="overlay">
-            <div class='shutdown'id="feedback" ontouchstart>
+            <div class="shutdown" id="feedback">
                 <div class='inner'>
                     <header class='bar'>
                         <h1>Send Feedback</h1>
@@ -44,18 +55,29 @@
 
                         <form method="post" action="contactengine.php">
                             <label class="name" for="Name">Name:</label>
-                            <input class="namet" type="text" name="Name" id="Name" />
+                            <input class="namet" type="text" name="Name" id="Name" required />
 
-                            <label class="city"f or="City">Device:</label>
-                            <input class="cityt" type="text" name="City" id="City" />
+                            <label class="city" for="City">Device:</label>
+                            <input  list="devices" class="cityt" type="text" name="City" id="City" required />
+
+                            <datalist id="devices">
+                                <option value="MacBook">
+                                <option value="iMac">
+                                <option value="iPhone">
+                                <option value="iPad">
+                                <option value="Windows Laptop">
+                                <option value="Windows Desktop">
+                                <option value="Android Phone">
+                                <option value="Android Tab">
+                            </datalist>
 
                             <label class="email" for="Email">Email:</label>
-                            <input class="emailt" type="text" name="Email" id="Email" />
+                            <input class="emailt" type="text" name="Email" id="Email" required />
 
                             <label class="msg" for="Message">Message:</label><br />
-                            <textarea class="msgt" name="Message" rows="20" cols="20" id="Message"></textarea>
+                            <textarea class="msgt" name="Message" rows="20" cols="20" id="Message" required ></textarea>
 
-                            <input class="smail" type="submit" name="submit" value="Submit" class="submit-button" />
+                            <input class="smail submit-button" type="submit" name="submit" value="Submit"/>
 
                             <input type="button" value="Cancel" class="restart" onclick="off()">
 
@@ -83,52 +105,52 @@
 
         <div class="icon1">
 
-            <div id="site" onclick="showone('explorer')"><a><img src="images/Icons/ie.png" alt="image" height="150px"></a></div>
+            <div id="site" onclick="showone('explorer')"><a><img src="images/Icons/ie.png" alt="explorer-icon" height="150"></a></div>
 
-            <div> <a href="https://x.clpo.net/Desktop/cv.pdf" target="_blank"><img src="images/Icons/cv.png" alt="image" height="150px"></a>
+            <div> <a href="https://x.clpo.net/Desktop/cv.pdf" target="_blank"><img src="images/Icons/cv.png" alt="cv-icon" height="150"></a>
             </div>
 
-            <div id="doc" onclick="showtwo('mydocuments')"><a><img src="images/Icons/docs.png" alt="documents" height="150px"></a>
+            <div id="doc" onclick="showtwo('mydocuments')"><a><img src="images/Icons/docs.png" alt="documents-icon" height="150"></a>
             </div>
 
-            <div id="cs"  ><a href="https://www.epicgames.com/fortnite/fr/buy-now/battle-royale" target="_blank"><img src="images/Icons/Poubelle.png" alt="image" height="150px"></a>
+            <div><a href="https://www.epicgames.com/fortnite/fr/buy-now/battle-royale" target="_blank"><img src="images/Icons/Poubelle.png" alt="trash-icon" height="150"></a>
             </div>
 
 
         </div>
         <div class="icon2">
-            <div id="cs" onClick="showthree('notepad')" ><a><img src="images/Icons/Read.png" alt="image" height="150px"></a>
+            <div onClick="showthree('notepad')" ><a><img src="images/Icons/Read.png" alt="notepad-icon" height="150"></a>
             </div>
-            <div id="cs"  onClick="showthree('achievement')"><a><img src="images/Icons/achievements.png" alt="image" height="150px"></a>
+            <div onClick="showthree('achievement')"><a><img src="images/Icons/achievements.png" alt="achievements-icon" height="150"></a>
             </div>
-            <div id="cs"  ><a href="mailto:clement.pommerie@gmail.com"><img src="images/Icons/Mail.png" alt="image" height="150px"></a>
+            <div><a href="mailto:clement.pommerie@gmail.com"><img src="images/Icons/Mail.png" alt="mail-icon" height="150"></a>
             </div>
-            <div id="cs"  ><a href="https://github.com/clementp0/W95-Web-Project/" target='_blank'><img src="images/Icons/project.png" alt="image" height="150px"></a>
+            <div><a href="https://github.com/clementp0/W95-Web-Project/" target='_blank'><img src="images/Icons/project.png" alt="github-icon" height="150"></a>
             </div>
-            <div id="cs" style="display: none" ><a onclick="virus()"><img src="images/Icons/virus.png" alt="image" height="150px"></a>
+            <div style="display: none" ><a onclick="virus()"><img src="images/Icons/virus.png" alt="virus-icon" height="150"></a>
             </div>
 
         </div>
         <div class="inconr">
-            <div id="cs" onClick="play()" style="cursor: pointer;"><a><img src="images/synthwave.png" alt="image" height="150px"><audio id="audio1" src="Desktop/synthwave.mp3"></audio></a>
+            <div  onClick="play()" style="cursor: pointer;"><a><img src="images/synthwave.png" alt="music-icon" height="150"><audio id="audio1" src="Desktop/synthwave.mp3"></audio></a>
             </div>
             <!--  </div> 
-<div id="cs" onClick="titou()"style="cursor: pointer;"><a><img src="images/6ix.png" alt="image" height="150px"><audio id="audio2" src="Desktop/Official%20Music%20Video.mp3"></audio></a>
+<div  onClick="titou()"style="cursor: pointer;"><a><img src="images/6ix.png" alt="image" height="150px"><audio id="audio2" src="Desktop/Official%20Music%20Video.mp3"></audio></a>
 </div>
-<div id="cs" onClick="scar()" style="cursor: pointer;"><a><img src="images/scar.png" alt="image" height="150px"><audio id="audio3" src="Desktop/scarlxrd%20-%20BRAINDEAD.mp3"></audio></a>
+<div  onClick="scar()" style="cursor: pointer;"><a><img src="images/scar.png" alt="image" height="150px"><audio id="audio3" src="Desktop/scarlxrd%20-%20BRAINDEAD.mp3"></audio></a>
 </div>  -->
 
         </div>
 
         <div class="icon3" id="icon3">
-            <div><div class="closepop" onclick="popo('icon3')">x</div><img class="popup" src="images/popupback.png"></div>
+            <div><div class="closepop" onclick="popo('icon3')">x</div><img class="popup" src="images/popupback.png" alt="popu-icon"></div>
 
         </div>
 
         <div class='fenetrecp' id="explorer">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/internet_explorer5-3.png">Wikileaks.com- Microsoft Internet Explorer</h1>
+                    <h1><img class="enhaut" src="images/internet_explorer5-3.png" alt="explorer-icon">Wikileaks.com- Microsoft Internet Explorer</h1>
                     <div class='buttons'>
                         <a class='smallonemize' onclick="smj('explorer'); showone('gros')"></a>
                         <a class='maximize'></a>
@@ -150,7 +172,7 @@
                 </nav>
                 <div class='container'>
                     <div class='content'>
-                        <iframe is="x-frame-bypass" name="wesh" class='wesh' src ="https://wikileaks.org/" width="1440px" height="920px"></iframe>
+                        <iframe is="x-frame-bypass" name="wesh" class='wesh' src ="https://wikileaks.org/" width="1440" height="920"></iframe>
                     </div>
                 </div>
             </div>
@@ -161,7 +183,7 @@
         <div class='documents' id="mydocuments">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/folder.ico">My Documents - C:\</h1>
+                    <h1><img class="enhaut" src="images/folder.ico" alt="folder-icon">My Documents - C:\</h1>
                     <div class='buttons'>
                         <a class='smallonemize' onclick="smj('mydocuments'); showone('docss')"></a>
                         <a class='maximize'></a>
@@ -171,11 +193,11 @@
                 <nav class='menu'>
                     <ul>
                         <li>
-                            <a><input type="button" value="<" class="back" onclick="history.back()"></a>
+                            <input type="button" value="<" class="back" onclick="history.back()" style="margin-top:4px;">
 
                         </li>
                         <li>
-                            <a><input type="button" value=">" class="back" onclick="history.forward()"></a>
+                            <input type="button" value=">" class="back" onclick="history.forward()" style="margin-top:4px;">
                         </li>
                         <li>
                             <a class="troplong">File</a>
@@ -190,7 +212,7 @@
                 </nav>    
                 <div class='container'>
                     <div class='content'>
-                        <iframe name="wesh" class='wesh' src ="https://x.clpo.net/Documents" width="1440px" height="1220px"></iframe>
+                        <iframe name="wesh" class='wesh' src ="https://x.clpo.net/Documents" width="1440" height="1220"></iframe>
                     </div>
                 </div>
             </div>
@@ -201,7 +223,7 @@
         <div class='notepad' id="notepad">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/wordpad_165-0.png">README - Notepad</h1>
+                    <h1><img class="enhaut" src="images/wordpad_165-0.png" alt="wordpad-icon">README - Notepad</h1>
                     <div class='buttons'>
                         <a class='close' onclick="smj('notepad')"></a>
                     </div>
@@ -253,7 +275,7 @@
         <div class='achievement' id="achievement">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/Icons/welcome_16928.ico">Achievements - Skills</h1>
+                    <h1><img class="enhaut" src="images/Icons/welcome_16928.ico" alt="id-icon">Achievements - Skills</h1>
                     <div class='buttons'>
                         <a class='close' onclick="smj('achievement')"></a>
                     </div>
@@ -273,65 +295,65 @@
                 </nav>    
                 <div class='container'>
                     <div class='content'>
-                        <a class="skills"><p class="titrea">------------------------</br>ACHIEVEMENTS</br>------------------------</p><p><h2>DESIGN :</h2></br></br>
-        Illustrator : 6 years </br>
-    Photoshop : 5 years </br>
-Sketch : 1 year </br>
-Invision : 2 years </br></br>
+                        <a class="skills"><p class="titrea">------------------------<br>ACHIEVEMENTS<br>------------------------</p><p><h2>DESIGN :</h2><br><br>
+                            Illustrator : 6 years <br>
+                            Photoshop : 5 years <br>
+                            Sketch : 1 year <br>
+                            Invision : 2 years <br><br>
 
-<h2>GRADUATION :</h2></br></br>
+                            <h2>GRADUATION :</h2><br><br>
 
-BEP : ARTISANAT ET MÉTIERS D'ART OPTION
-COMMUNICATION VISUELLE PLURIMÉDIA</br>
-BAC : ARTISANAT ET MÉTIERS D'ART OPTION
-COMMUNICATION VISUELLE PLURIMÉDIA</br>
-BACHELOR 3 : CHEF DE
-PROJET DIGITAL - ECV DIGITAL</br>
-TOEIC BRIDGE : 72/90 & 84/90</br></br>
+                            BEP : ARTISANAT ET MÉTIERS D'ART OPTION
+                            COMMUNICATION VISUELLE PLURIMÉDIA<br>
+                            BAC : ARTISANAT ET MÉTIERS D'ART OPTION
+                            COMMUNICATION VISUELLE PLURIMÉDIA<br>
+                            BACHELOR 3 : CHEF DE
+                            PROJET DIGITAL - ECV DIGITAL<br>
+                            TOEIC BRIDGE : 72/90 & 84/90<br><br>
 
-<h2>CYBERSECURITY :</h2></br></br>
-Root-me.org score : 170 (web-servers)</br>
-- HTTP OPEN Redirect </br>
--  HTTP - User Agent</br>
--  Weak Password</br>
--  Backup file</br>
--  HTTP - Directory Indexing</br>
--  HTTP - Header</br>
--  HTTP - POST</br>
--  HTTP - Improper redirect</br>
--  HTTP - Cookies </br></br>
+                            <h2>CYBERSECURITY :</h2><br><br>
+                            Root-me.org score : 170 (web-servers)<br>
+                            - HTTP OPEN Redirect <br>
+                            -  HTTP - User Agent<br>
+                            -  Weak Password<br>
+                            -  Backup file<br>
+                            -  HTTP - Directory Indexing<br>
+                            -  HTTP - Header<br>
+                            -  HTTP - POST<br>
+                            -  HTTP - Improper redirect<br>
+                            -  HTTP - Cookies <br><br>
 
-Wireless attack (Airmon-ng & Aircrack-ng)</br>
-Web server audit (Nikto)</br>
-Man-in-the-middle (Wireshark)</br>
-Dns Spoof (Dnschief & Ettercap)</br>
-Phishing SE (Socialfish)</br>
-SQL Injection (Havij)</br>
-Payloads (Armitage, Metasploit, Netcat, Shellter)</br>
-Port scanning (Nmap)</br></br>
+                            Wireless attack (Airmon-ng & Aircrack-ng)<br>
+                            Web server audit (Nikto)<br>
+                            Man-in-the-middle (Wireshark)<br>
+                            Dns Spoof (Dnschief & Ettercap)<br>
+                            Phishing SE (Socialfish)<br>
+                            SQL Injection (Havij)<br>
+                            Payloads (Armitage, Metasploit, Netcat, Shellter)<br>
+                            Port scanning (Nmap)<br><br>
 
-Last achievement : </br></br>
+                            Last achievement : <br><br>
 
-- Get a remote shell on a mac,by spoofing MAC OS Trusted app (payload).</p></a>
-</div>
-</div>
-</div>
-</div>
-
-<!--FENETRE LINKS ET DOWNLOADS / RELEASES -->
-
-
-<div class='fenetrecp2' id='showtwo' ontouchstart>
-    <div class='inner'>
-        <header class='bar'>
-            <h1><img class="enhaut" src="images/scrnsave_100.ico">C:\Windows\system32\cmd.exe</h1>
-            <div class='buttons'>
-                <a class='smallonemize' onclick="yolo('showtwo'); showone('smallone')"></a>
+                            - Get a remote shell on a mac,by spoofing MAC OS Trusted app (payload).</a>
+                    </div>
+                </div>
             </div>
-        </header>
-        <div class="beta">
-            Microsoft Windows [Version 5.2.3790]<br/><C> Copyright 1985-2003 Microsoft Corp.</br>
-            <pre>
+        </div>
+
+        <!--FENETRE LINKS ET DOWNLOADS / RELEASES -->
+
+
+        <div class='fenetrecp2' id='showtwo'>
+            <div class='inner'>
+                <header class='bar'>
+                    <h1><img class="enhaut" src="images/scrnsave_100.ico" alt="screen-icon">C:\Windows\system32\cmd.exe</h1>
+                    <div class='buttons'>
+                        <a class='smallonemize' onclick="yolo('showtwo'); showone('smallone')"></a>
+                    </div>
+                </header>
+                <div class="beta">
+                    Microsoft Windows [Version 5.2.3790]<br>© Copyright 1985-2003 Microsoft Corp.<br>
+                    <pre>
  ______     __  __     ______     __   __     ______     ______        __         ______     ______    
 /\  ___\   /\ \_\ \   /\  __ \   /\ "-.\ \   /\  ___\   /\  ___\      /\ \       /\  __ \   /\  ___\   
 \ \ \____  \ \  __ \  \ \  __ \  \ \ \-.  \  \ \ \__ \  \ \  __\      \ \ \____  \ \ \/\ \  \ \ \__ \  
@@ -340,117 +362,116 @@ Last achievement : </br></br>
 
 </pre>
 
-        </div>
-        <div class="oui" id="terminal">
-            C:\Users\Clement><a><a href="https://x.clpo.net/Release/a_0.1.0.zip"> a_0.1.0</a><br/>24/03/18 (Base)<br/></a></br>
-
-        C:\Users\Clement> list all /Release</br>
-
-    </br><a><a href="https://x.clpo.net/Release/a_0.1.4.zip">a_0.1.4 </a> > 25/03/18 (Fonctionnality Added)<br/></a>
-
-<a><a href="https://x.clpo.net/Release/a_0.1.5.zip"> a_0.1.5 </a> > 26/03/18 (Clean Code)<br/></a>
-
-<a><a href="https://x.clpo.net/Release/a_0.1.6.zip"> a_0.1.6 </a> > 26/03/18 (Desktop Added)<br/></a>
-
-<a><a href="https://x.clpo.net/Release/a_0.1.7.zip"> a_0.1.7 </a> > 26/03/18 (CV + Some Fix)<br/></a>
-
-<a><a href="https://x.clpo.net/Release/a_0.1.8.zip"> a_0.1.8 </a> > 26/03/18 (Start Menu Added + S fix)<br/></a>
-
-<a><a> a_0.1.9 </a> > 06/07/18 S Fix (no release)<br/></a>
-
-<a><a> a_0.2.0 </a> > 10/07/18 Desktop got some changes and fix / custom .htaccess with w95 look / "My Documents" added / "Icon" & "Shortcuts" changes / Adding two audio files on Desktop / "Recycle bin" added.. dont know why..<br/></a>
-<a><a href=""> a_0.2.1 </a> > 17/12/18 Setup.exe added / SEND MAIL ADDED / CSGO.EXE REMOVED / README.TxT ADDED / DOMAIN NAME <br/></a>
-<a><a href=""> a_0.2.2 </a> > 31/01/19 Setup.exe removed / CSGO.EXE REMOVED / infos popup added<br/></a>
-</br>
-</div>
-<input type="button" name="answer" value="Show previous Releases >" onclick="showoneDiv()" id="show_more" class="boutonnn"/>
-<div id="beta_1">RELEASE : BETA 1 IS OUT ! <br/><br/>
-    - PWA (Progressive Web App) <a style="color: green">    js/manifest.json</a><br/> - Cache management (Service Worker)<a style="color: green">    "w95B1" js/sw.js</a><br/> - Push Notification added to keep you updated <a style="color: green">    OneSignalSDKWorker.js</a><br/> - Mobile / Tab Version <a style="color: green">    css/mobile.css</a><br/> - Iframe now target Wikileaks<br/> - You can now "install" my web-site on your mobile phone (AND/IOS) using "add to home screen"<br/> - Restart option removed <br/> - Feedback option added <br/> ----------------------- <br/>
-    - Notification compatibility list : G-Chrome / Android Browser / EDGE<br/>
-    - Mobile Version compatibility list : S10 / S9 / S8 / S6 / A6 / iPad / iPX / <br/>
-    - Screen ration compatibility list : From 4:3 up to 21:9
-    <br/> ----------------------- <br/>
-    Please send me some FEEDBACK using the "start" menu
-</div>
-</div>
-</div>
-
-
-<!-- WINDOWS BAR -->
-
-<div class="toolbar">
-    <input type="checkbox" id="start-menu" />
-    <div  class="lesel"><label for="start-menu" class="start-button">
-        <span></span> Start
-        </label></div>
-    <div class="startbar">
-        <div class="iconbar">
-            <b></b>
-        </div>
-        <div id="gros" class="showwindow"  onclick="showone('explorer'); showone('gros')">
-            <b> c-p.exe</b>
-        </div>
-        <div id="smallone" class="showsmall"  onclick="showone('showtwo'); showone('smallone')">
-            <b>CMD.exe C:\..</b>
-        </div>
-        <div id="info" class="infos"  on//click="showthree('ouep');showone('info')">
-            <div id="time"></div>
-        </div>
-        <div id="docss" class="doci"  onclick="showthree('mydocuments');showone('docss')">
-            <b>My Documents</b>
-        </div>
-        <div id="github"  ><a href="https://github.com/clementp0/W95-Web-Project/releases/tag/Beta2" target="_blank"><img src="images/github.png" alt="image" height="200px"></a>
-        </div>
-        <img class ="attpop0" src="images/systray_300.ico">
-        <img class ="attpop" src="images/icwdial_101.ico">
-        <img class ="attpop2" src="images/confcp_116.ico">
-
-    </div>
-
-
-
-    <!-- WINDOWS MENU -->
-
-    <div class="start-menu">
-        <div class="workstation">
-            <div>Windows 95</div>
-        </div>
-
-        <div onclick="location.href='http://www.facebook.com/clement.pom'" class="iconimage">
-            <li class="iconcontainer" >
-                <div id="cs" ><img class="iconmenu" src="images/Facebook.png" height="10px">
-                    <a>Facebook</a>
                 </div>
-            </li>
-        </div>
+                <div class="oui" id="terminal">
+                    C:\Users\Clement><p><a href="https://x.clpo.net/Release/a_0.1.0.zip"> a_0.1.0</a><br>24/03/18 (Base)<br></p><br>
 
-        <div onclick="location.href='http://www.instagram.com/clement.po'" class="iconimage">
-            <li class="iconcontainer" > 
-                <div id="cs" ><img class="iconmenu" src="images/insta.png" height="10px">
-                    <a>Instagram</a>
+                    C:\Users\Clement> list all /Release<br>
+
+                    <br><p><a href="https://x.clpo.net/Release/a_0.1.4.zip">a_0.1.4 </a> > 25/03/18 (Fonctionnality Added)<br></p>
+                    <p><a href="https://x.clpo.net/Release/a_0.1.5.zip"> a_0.1.5 </a> > 26/03/18 (Clean Code)<br></p>
+
+                    <p><a href="https://x.clpo.net/Release/a_0.1.6.zip"> a_0.1.6 </a> > 26/03/18 (Desktop Added)<br></p>
+
+                    <p><a href="https://x.clpo.net/Release/a_0.1.7.zip"> a_0.1.7 </a> > 26/03/18 (CV + Some Fix)<br></p>
+
+                    <p><a href="https://x.clpo.net/Release/a_0.1.8.zip"> a_0.1.8 </a> > 26/03/18 (Start Menu Added + S fix)<br></p>
+
+                    <p><a> a_0.1.9 </a> > 06/07/18 S Fix (no release)<br></p>
+
+                    <p><a> a_0.2.0 </a> > 10/07/18 Desktop got some changes and fix / custom .htaccess with w95 look / "My Documents" added / "Icon" & "Shortcuts" changes / Adding two audio files on Desktop / "Recycle bin" added.. dont know why..<br></p>
+                    <p><a href=""> a_0.2.1 </a> > 17/12/18 Setup.exe added / SEND MAIL ADDED / CSGO.EXE REMOVED / README.TxT ADDED / DOMAIN NAME <br></p>
+                    <p><a href=""> a_0.2.2 </a> > 31/01/19 Setup.exe removed / CSGO.EXE REMOVED / infos popup added<br></p>
+                    <br>
                 </div>
-            </li>
-        </div>
-
-        <div 
-             onclick="location.href='https://dribbble.com/clementpo'" class="iconimage">
-            <li class="iconcontainer" >  
-                <div id="cs" ><img class="iconmenu" src="images/dribbble.png" height="10px">
-                    <a>Dribbble</a>
+                <input type="button" name="answer" value="Show previous Releases >" onclick="showoneDiv()" id="show_more" class="boutonnn"/>
+                <div id="beta_1">RELEASE : BETA 1 IS OUT ! <br><br>
+                    - PWA (Progressive Web App) <a style="color: green">    js/manifest.json</a><br> - Cache management (Service Worker)<a style="color: green">    "w95B1" js/sw.js</a><br> - Push Notification added to keep you updated <a style="color: green">    OneSignalSDKWorker.js</a><br> - Mobile / Tab Version <a style="color: green">    css/mobile.css</a><br> - Iframe now target Wikileaks<br> - You can now "install" my web-site on your mobile phone (AND/IOS) using "add to home screen"<br> - Restart option removed <br> - Feedback option added <br> ----------------------- <br>
+                    - Notification compatibility list : G-Chrome / Android Browser / EDGE<br>
+                    - Mobile Version compatibility list : S10 / S9 / S8 / S6 / A6 / iPad / iPX / <br>
+                    - Screen ration compatibility list : From 4:3 up to 21:9
+                    <br> ----------------------- <br>
+                    Please send me some FEEDBACK using the "start" menu
                 </div>
-            </li>
+            </div>
         </div>
-        <div onclick="showone('explorer')">
-            <li class="iconcontainer" >
-                <img class="iconmenu" src="images/internet_explorer5-3.png" height="10px"> 
-                Internet explorer</li>
+
+
+        <!-- WINDOWS BAR -->
+
+        <div class="toolbar">
+            <input type="checkbox" id="start-menu" />
+            <div  class="lesel"><label for="start-menu" class="start-button">
+                <span></span> Start
+                </label></div>
+            <div class="startbar">
+                <div class="iconbar">
+                    <b></b>
+                </div>
+                <div id="gros" class="showwindow"  onclick="showone('explorer'); showone('gros')">
+                    <b> c-p.exe</b>
+                </div>
+                <div id="smallone" class="showsmall"  onclick="showone('showtwo'); showone('smallone')">
+                    <b>CMD.exe C:\..</b>
+                </div>
+                <div id="info" class="infos"  onclick="showthree('ouep');showone('info')">
+                    <div id="time"></div>
+                </div>
+                <div id="docss" class="doci"  onclick="showthree('mydocuments');showone('docss')">
+                    <b>My Documents</b>
+                </div>
+                <div id="github"  ><a href="https://github.com/clementp0/W95-Web-Project/releases/tag/Beta3" target="_blank"><img src="images/github.png" alt="image" height="200"></a>
+                </div>
+                <img class ="attpop0" src="images/systray_300.ico" alt="battery-icon">
+                <img class ="attpop" src="images/icwdial_101.ico" alt="warning-icon">
+                <img class ="attpop2" src="images/confcp_116.ico" alt="speaker-icon">
+
+            </div>
+
+
+
+            <!-- WINDOWS MENU -->
+
+            <div class="start-menu">
+                <div class="workstation">
+                    <div>Windows 95</div>
+                </div>
+
+                <div onclick="location.href='http://www.facebook.com/clement.pom'" class="iconimage">
+                    <div class="iconcontainer" >
+                        <img class="iconmenu" src="images/Facebook.png" alt="facebook-icon" height="10">
+                        <a>Facebook</a>
+
+                    </div>
+                </div>
+
+                <div onclick="location.href='http://www.instagram.com/clement.po'" class="iconimage">
+                    <div class="iconcontainer" > 
+                        <img class="iconmenu" src="images/insta.png" height="10" alt="instagram-icon">
+                        <a>Instagram</a>
+
+                    </div>
+                </div>
+
+                <div 
+                     onclick="location.href='https://dribbble.com/clementpo'" class="iconimage">
+                    <div class="iconcontainer" >  
+                        <img class="iconmenu" src="images/dribbble.png" alt="dribbble-icon" height="10">
+                        <a>Dribbble</a>
+
+                    </div>
+                </div>
+                <div onclick="showone('explorer')">
+                    <div class="iconcontainer" >
+                        <img class="iconmenu" src="images/internet_explorer5-3.png" height="10" alt="explorer-icon"> 
+                        Internet explorer</div>
+                </div>
+                <div onclick="on()">
+                    <div class="chut">
+                        <img class="iconmenu" src="images/icon-46.png" height="10" alt="feedback-icon">   Feedback...</div>
+                </div>
+            </div>
         </div>
-        <div onclick="on()">
-            <li class="chut">
-                <img class="iconmenu" src="images/icon-46.png" height="10px">   Feedback...</li>
-        </div>
-    </div>
-</div>
 
 
 
@@ -458,9 +479,9 @@ Last achievement : </br></br>
 
 
 
-<!-- DOLFIN -->
+        <!-- DOLFIN -->
 
-<!-- <div class="ctrls">
+        <!-- <div class="ctrls">
 <div class="error-title">Controls</div>
 <label for="amount">Max of errors:</label>
 <input type="text" id="amountTo" name="amount" value="100" style="width:40px;" onkeypress="return justNumbers(event);"/><br />
@@ -488,28 +509,27 @@ Last achievement : </br></br>
 </div>
 -->
 
-<!-- BSOD -->
+        <!-- BSOD -->
 
-<div class="bsod" id="bsod" onclick="restart()" onclick="location.href='#restart'">
-    <iframe src="/bsod/index.html" onclick="restart()">
-    </iframe>
-</div>
+        <div class="bsod" id="bsod" onclick="restart();location.href='#restart'">
+            <iframe src="/bsod/index.html" onclick="restart()">
+            </iframe>
+        </div>
 
-<!-- SCREEN -->
+        <!-- SCREEN -->
 
-<div id="screen">
-    <article id="black"></article>
-    <article id="restart">
-        <header class="starting">Starting Windows 95...</header>
-        <section class="startup">
-            <h2>Microsoft<em>Windows<sup>&reg;</sup><strong>95</strong></em></h2>
-            <h3>Microsoft<sup>&reg;</sup></h3>
-            <i class="clouds"></i>
-            <i class="logo"></i>
-            <footer class="bar"></footer>
-        </section>
-    </article>
-</div>
+        <div id="screen">
+            <article id="restart">
+                <header class="starting"><h2>Starting Windows 95...</h2></header>
+                <section class="startup">
+                    <h2>Microsoft<em>Windows<sup>&reg;</sup><strong>95</strong></em></h2>
+                    <h3>Microsoft<sup>&reg;</sup></h3>
+                    <i class="clouds"></i>
+                    <i class="logo"></i>
+                    <footer class="bar"></footer>
+                </section>
+            </article>
+        </div>
 
-</body>
+    </body>
 </html>

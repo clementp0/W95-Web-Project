@@ -1,9 +1,8 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
-/* ^^^^^^^^^^^^^  BOUTONS WINDOWS ^^^^^^^^^^^^^^^ */
-
-@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 
 body, html {
     height: 100%;
@@ -14,7 +13,6 @@ body {
     box-sizing: border-box;
     overflow-x:hidden;
     background-color: #008080;
-    background-imagez: url(../images/1854803b4c0e39ca5cfa283b3dbd4c0c.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -994,7 +992,7 @@ body {
 
 
 @media only screen and (max-width: 1920px){
-    ..documents { width: 90%; }
+    .documents { width: 90%; }
 }
 .fenetrecp2 {
     overflow: hidden;
@@ -1022,7 +1020,7 @@ body {
     overflow: hidden;
     width: 85%;
     height: 90%;
-    max-width: 100;
+    max-width: 100%;
     max-height: 1400px;
     padding: 1px;
     top:0;
@@ -1167,7 +1165,7 @@ body {
     text-decoration: underline;
 }
 .documents .container {
-    border: 1;
+    border: 1px;
     position: relative;
     height: calc(95%);
 }
@@ -1248,8 +1246,6 @@ body {
 .beta pre{
     text-decoration-line: none;
     color: green;
-}
-
 }
 .back{
     margin-top: 0px;
@@ -1537,7 +1533,7 @@ body {
     text-decoration: underline;
 }
 .setup .container {
-    border: 1;
+    border: 1px;
     position: relative;
     height: calc(95%);
 }
@@ -1736,7 +1732,7 @@ body {
     padding-left: 10px;
     background-color: white;
     overflow:auto;
-    border: 1;
+    border: 1px;
     position: relative;
     height: calc(93%);
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
@@ -1945,7 +1941,7 @@ strong{
     padding-left: 10px;
     background-color: black;
     overflow:scroll;
-    border: 1;
+    border: 1px;
     position: relative;
     height: calc(93%);
     -webkit-box-shadow: inset -1px -1px 0 0 #464147, inset 1px 1px 0 0 #dedcde;
@@ -2013,9 +2009,6 @@ strong{
     font-size: 1.2em;
 }
 
-
-@import "compass";
-
 #slideshowoneContainer {
     max-width: 870px;
     width: 100%;
@@ -2063,9 +2056,8 @@ strong{
     z-index: 1005;
     font-family: verdana;
     font-size: 50px;
-    @include transition(color, 500ms, ease-in);
     left: 25px;
-}
+        }
 #prev > a :hover {
     z-index:1005;
     color: #f28;
@@ -2079,7 +2071,6 @@ strong{
     z-index: 1005;
     font-family: verdana;
     font-size: 50px;
-    @include transition(color, 500ms, ease-in);
     right: 25px;
 }
 #next > a:hover {
@@ -2232,7 +2223,7 @@ strong{
     text-decoration: underline;
 }
 .porfolio .container {
-    border: 1;
+    border: 1px;
     position: relative;
     height: calc(95%);
 }
@@ -2557,7 +2548,7 @@ form{
     background: #BABFC3;
     padding: 0px 3px;
     padding-bottom: 3px;
-    padding-top: -1px;
+    padding-top: 1px;
     padding-left: 2px;
     width: 14px;
     height: 14px;
