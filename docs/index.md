@@ -2,6 +2,7 @@
 
 # Windows 95 - Web project
 
+
 Trying to recreate w95 experience, using only html/css and less js as possible.
 
 This project was initialised summer 2018, to create an "virtual environment".
@@ -11,6 +12,11 @@ But over the month its became a website with a near real windows 95 experience. 
 to find some people who can help me to dev. this website and add functionalities. 
 
 Feel free to send feedback about your experience on my website. 
+
+[BETA 1](#beta-1---the-pwa-update)
+[BETA 2](#beta-2---the-beginning-of-a-new-era)
+[BETA 3](#beta-3---look-at-my-code-im-sexy-now)
+[BETA 4](#beta-4---sylvester-standalone)
 
 ![alt text](https://clpo.net/github/screen.png "Screen")
 
@@ -71,7 +77,7 @@ Feel free to send feedback about your experience on my website.
 ## BETA 3 - LOOK AT MY CODE, IM SEXY NOW  
 
 - W3C Css Validator : No error was found ! 
-- W3C Html Validator : From ~300 erros to 1 :
+- W3C Html Validator : From ~300 errors to 1 :
 https://validator.w3.org/nu/?doc=https://x.clpo.net/
 - Some Randoms fix
 - ContactEngine.php fixed
@@ -91,6 +97,30 @@ https://validator.w3.org/nu/?doc=https://x.clpo.net/
   <img src="https://clpo.net/github/feedback.png" />
 </p>
 
+
+
+
+## BETA 4 - SYLVESTER STANDALONE
+
+- Fix : Microsoft Internet Explorer's iframe
+-  Added : forward & back buttons for Microsoft Internet Explorer 
+- New target for Microsoft Internet Explorer : 
+ https://github.com/XXIIVV/Webring  //  [https://webring.xxiivv.com/](https://webring.xxiivv.com/)
+- Fix : Notification system @Onesignal
+- ####  New Progressive Web APP features :
+![enter image description here](https://image.noelshack.com/fichiers/2020/07/1/1581363873-pwa.png)
+- Compatible with all devices running GOOGLE CHROME.
+- Compatible with stock Android devices web browser.
+- Toggle a "pop-up" to install the app.
+- New Manifest.json  
+- #### Massive optimisation Work :
+![GTMEtrix Results](https://image.noelshack.com/fichiers/2020/07/1/1581362586-optimization.png)
+- Leverage Browser Caching
+- Serve Scaled images
+- Optimize Images
+- Minify
+- Defer parsing of JavaScript
+- Enable Compression
 
 Service Worker : 
 https://developers.google.com/web/fundamentals/primers/service-workers/
