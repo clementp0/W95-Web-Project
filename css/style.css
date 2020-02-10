@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
-
 *, *:before, *:after {
     box-sizing: border-box;
 }
@@ -32,6 +30,9 @@ body {
     margin: 0px;
     overflow: hidden;
 }
+
+/* --------------------- ICONS DESKTOP ------------------------- */
+
 
 .icon1 > div:hover{
     background-color: #0000001c;
@@ -102,6 +103,10 @@ body {
     to   { opacity: 1; }
 }
 
+
+/* ------------------ ERROR POPUP ------------------- */
+
+
 .popup{
     margin: 0px;
     display: block;
@@ -133,7 +138,9 @@ body {
     margin-right: 90px;
     cursor: pointer;
 }
-/* ------------------ BARRE WINDOWS & RACOURCIS ------------------- */
+
+/* ------------------ WINDOWS NAV / LINKS  ------------------- */
+
 .textbox{
     font-family: Tahoma, Helvetica, Arial, sans-serif;
     text-transform:uppercase;
@@ -739,6 +746,7 @@ body {
 }
 
 /* ------------------ PAGE PRINCIPALE ------------------- */
+
 @media only screen and (max-width: 1920px){
     .fenetrecp { width: 90%; }
 }
@@ -765,6 +773,13 @@ body {
     height: 100%;
     max-height: 1920px;
     padding: 1px;
+}
+
+.weshz{
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 }
 .fenetrecp .inner {
     width: 100%;
@@ -2057,7 +2072,7 @@ strong{
     font-family: verdana;
     font-size: 50px;
     left: 25px;
-        }
+}
 #prev > a :hover {
     z-index:1005;
     color: #f28;

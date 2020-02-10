@@ -1,0 +1,22 @@
+{
+  "name": "Windows 95",
+  "short_name": "W95 PWA",
+  "display": "standalone",
+  "orientation":"portrait",
+  "start_url": "./",
+  "scope": "./",
+  "theme_color": "#008080",
+  "background_color": "#008080",
+  "icons": [
+    {
+      "src": "/js/icon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/js/iconf.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

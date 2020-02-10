@@ -4,33 +4,53 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no" >
         <meta name="google-site-verification" content="SZFcUTVqFOF7Q1OKfU2pfUhjv4lRAb-6YDQHBHPczGM" />
-        <meta name="description" content="  Welcome to my personal website, but also a way to the past inside the well known Windows 95. You will find all the informations you need about me in an old OS." />
+        <meta name="description" content="Welcome to my personal website, but also a way to the past inside the well known Windows 95. You will find all the informations you need about me in an old OS." />
         <title>Windows 95 I Clément POMMERIE</title>
 
         <!-- LINKS -->
 
-        <link href="https://fonts.googleapis.com/css?family=VT323" rel="preload">
         <link rel="stylesheet" href="css/style2.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="icon" href="images/Icon_40.ico" />
+        <link rel="icon" href="images/Icon_40.ico" type="image/x-icon" />
         <link media="only screen and (max-device-width: 915px)" href="/css/mobile.css" type="text/css" rel="stylesheet" />
+        <link href="/fonts/VT323.css" rel="preload" as="font">
+        <link href="/fonts/PressStart2P.css" rel="stylesheet">
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <!-- JQUERY -->
+
+        <script defer src="/js/jquery-1.12.4.js"></script>
+        <script defer src="/js/jquery-ui.js"></script>
+        <link rel="stylesheet" href="/css/jquery-ui.css">
+
 
         <!-- PWA -->
 
-        <link rel="manifest" href="/js/manifest.json" />
-        <script defer src="/js/site.js"></script>
         <script defer src="/js/crypto.js"></script>
         <script defer src="/js/main.js"></script>
-        <link rel="manifest" href="/manifest.json" />
-        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+        <link rel="manifest" href="manifest.json" />
+        <meta name="theme-color" content="#008080">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+
+        <script>
+            if ('serviceWorker' in navigator) {
+                // Register a service worker hosted at the root of the
+                // site using a more restrictive scope.
+                navigator.serviceWorker.register('./sw.js', {scope: './'}).then(function(registration) {
+                    console.log('Service worker registration succeeded:', registration);
+                }, /*catch*/ function(error) {
+                    console.log('Service worker registration failed:', error);
+                });
+            } else {
+                console.log('Service workers are not supported.');
+            }	
+
+        </script>
 
         <!-- NOTIFICATION -->
 
-
+        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
         <script>
             var OneSignal = window.OneSignal || [];
             OneSignal.push(function() {
@@ -88,7 +108,7 @@
             </div>
         </div>
 
-        <!-- TUTORIEL -->
+        <!-- TUTORIEL // DISABLED -->
 
         <!-- 
 <div class="tutoriel" id="tuto">
@@ -134,23 +154,22 @@
         <div class="inconr">
             <div  onClick="play()" style="cursor: pointer;"><a><img src="images/synthwave.png" alt="music-icon" height="150"><audio id="audio1" src="Desktop/synthwave.mp3"></audio></a>
             </div>
-            <!--  </div> 
-<div  onClick="titou()"style="cursor: pointer;"><a><img src="images/6ix.png" alt="image" height="150px"><audio id="audio2" src="Desktop/Official%20Music%20Video.mp3"></audio></a>
-</div>
-<div  onClick="scar()" style="cursor: pointer;"><a><img src="images/scar.png" alt="image" height="150px"><audio id="audio3" src="Desktop/scarlxrd%20-%20BRAINDEAD.mp3"></audio></a>
-</div>  -->
 
         </div>
+
+        <!-- ERROR POPUP -->
 
         <div class="icon3" id="icon3">
             <div><div class="closepop" onclick="popo('icon3')">x</div><img class="popup" src="images/popupback.png" alt="popu-icon"></div>
 
         </div>
 
+        <!-- MICROSOFT INTERNET -->
+
         <div class='fenetrecp' id="explorer">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/internet_explorer5-3.png" alt="explorer-icon">Wikileaks.com- Microsoft Internet Explorer</h1>
+                    <h1><img class="enhaut" src="images/internet_explorer5-3.png" alt="explorer-icon">Webring.xxiivv - Microsoft Internet Explorer</h1>
                     <div class='buttons'>
                         <a class='smallonemize' onclick="smj('explorer'); showone('gros')"></a>
                         <a class='maximize'></a>
@@ -159,6 +178,13 @@
                 </header>
                 <nav class='menu'>
                     <ul>
+                        <li>
+                            <input type="button" value="<" class="back" onclick="history.back()" style="margin-top:2px;">
+
+                        </li>
+                        <li>
+                            <input type="button" value=">" class="back" onclick="history.forward()" style="margin-top:2px; margin-left: 4px;">
+                        </li>
                         <li>
                             <a href='https://www.facebook.com/clement.pom' target='_blank'>Facebook</a>
                         </li>
@@ -172,18 +198,18 @@
                 </nav>
                 <div class='container'>
                     <div class='content'>
-                        <iframe is="x-frame-bypass" name="wesh" class='wesh' src ="https://wikileaks.org/" width="1440" height="920"></iframe>
+                        <iframe is="x-frame-bypass" name="wesh" class='weshz' src ="https://webring.xxiivv.com/" width="1440" height="920"></iframe>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- DOCUMENTS -->
+        <!-- MY DOCUMENTS -->
 
         <div class='documents' id="mydocuments">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/folder.ico" alt="folder-icon">My Documents - C:\</h1>
+                    <h1><img class="enhaut" src="./htaccess/icons/folder.ico" alt="folder-icon">My Documents - C:\</h1>
                     <div class='buttons'>
                         <a class='smallonemize' onclick="smj('mydocuments'); showone('docss')"></a>
                         <a class='maximize'></a>
@@ -212,7 +238,7 @@
                 </nav>    
                 <div class='container'>
                     <div class='content'>
-                        <iframe name="wesh" class='wesh' src ="https://x.clpo.net/Documents" width="1440" height="1220"></iframe>
+                        <iframe name="oui" class='wesh' src ="https://x.clpo.net/Documents" width="1440" height="1220"></iframe>
                     </div>
                 </div>
             </div>
@@ -275,7 +301,7 @@
         <div class='achievement' id="achievement">
             <div class='inner'>
                 <header class='bar'>
-                    <h1><img class="enhaut" src="images/Icons/welcome_16928.ico" alt="id-icon">Achievements - Skills</h1>
+                    <h1><img class="enhaut" src="images/Icons/welcome_16928.ico" alt="id-icon" type="image/x-icon">Achievements - Skills</h1>
                     <div class='buttons'>
                         <a class='close' onclick="smj('achievement')"></a>
                     </div>
@@ -340,7 +366,7 @@
             </div>
         </div>
 
-        <!--FENETRE LINKS ET DOWNLOADS / RELEASES -->
+        <!-- LINKS & DOWNLOADS // DISABLED -->
 
 
         <div class='fenetrecp2' id='showtwo'>
@@ -411,7 +437,7 @@
                 <div id="gros" class="showwindow"  onclick="showone('explorer'); showone('gros')">
                     <b> c-p.exe</b>
                 </div>
-                <div id="smallone" class="showsmall"  onclick="showone('showtwo'); showone('smallone')">
+                <div id="smallone" style="display: none" class="showsmall"  onclick="showone('showtwo'); showone('smallone')">
                     <b>CMD.exe C:\..</b>
                 </div>
                 <div id="info" class="infos"  onclick="showthree('ouep');showone('info')">
@@ -420,14 +446,13 @@
                 <div id="docss" class="doci"  onclick="showthree('mydocuments');showone('docss')">
                     <b>My Documents</b>
                 </div>
-                <div id="github"  ><a href="https://github.com/clementp0/W95-Web-Project/releases/tag/Beta3" target="_blank"><img src="images/github.png" alt="image" height="200"></a>
+                <div id="github"  ><a href="https://github.com/clementp0/W95-Web-Project/releases/tag/Beta4" target="_blank"><img src="images/github.png" alt="image" height="200"></a>
                 </div>
-                <img class ="attpop0" src="images/systray_300.ico" alt="battery-icon">
-                <img class ="attpop" src="images/icwdial_101.ico" alt="warning-icon">
-                <img class ="attpop2" src="images/confcp_116.ico" alt="speaker-icon">
+                <img class ="attpop0" src="images/systray_300.ico" alt="battery-icon" type="image/x-icon">
+                <img class ="attpop" src="images/icwdial_101.ico" alt="warning-icon" type="image/x-icon" >
+                <img class ="attpop2" src="images/confcp_116.ico" alt="speaker-icon" type="image/x-icon">
 
             </div>
-
 
 
             <!-- WINDOWS MENU -->
@@ -476,12 +501,12 @@
 
 
 
+        <!-- DISABLED SECTION -->
 
 
+        <!-- DOLFIN
 
-        <!-- DOLFIN -->
-
-        <!-- <div class="ctrls">
+<!-- <div class="ctrls">
 <div class="error-title">Controls</div>
 <label for="amount">Max of errors:</label>
 <input type="text" id="amountTo" name="amount" value="100" style="width:40px;" onkeypress="return justNumbers(event);"/><br />
@@ -509,27 +534,29 @@
 </div>
 -->
 
-        <!-- BSOD -->
+        <!-- BSOD 
 
-        <div class="bsod" id="bsod" onclick="restart();location.href='#restart'">
-            <iframe src="/bsod/index.html" onclick="restart()">
-            </iframe>
-        </div>
+<div class="bsod" id="bsod" onclick="restart();location.href='#restart'">
+<iframe src="/bsod/index.html" onclick="restart()">
+</iframe>
+</div>
+-->
 
-        <!-- SCREEN -->
+        <!-- SCREEN
 
-        <div id="screen">
-            <article id="restart">
-                <header class="starting"><h2>Starting Windows 95...</h2></header>
-                <section class="startup">
-                    <h2>Microsoft<em>Windows<sup>&reg;</sup><strong>95</strong></em></h2>
-                    <h3>Microsoft<sup>&reg;</sup></h3>
-                    <i class="clouds"></i>
-                    <i class="logo"></i>
-                    <footer class="bar"></footer>
-                </section>
-            </article>
-        </div>
+<div id="screen">
+<article id="restart">
+<header class="starting"><h2>Starting Windows 95...</h2></header>
+<section class="startup">
+<h2>Microsoft<em>Windows<sup>&reg;</sup><strong>95</strong></em></h2>
+<h3>Microsoft<sup>&reg;</sup></h3>
+<i class="clouds"></i>
+<i class="logo"></i>
+<footer class="bar"></footer>
+</section>
+</article>
+</div>
+-->
 
     </body>
 </html>
