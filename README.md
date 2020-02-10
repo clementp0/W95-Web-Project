@@ -16,6 +16,7 @@ Feel free to send feedback about your experience on my website.
 [BETA 1](#beta-1---the-pwa-update)
 [BETA 2](#beta-2---the-beginning-of-a-new-era)
 [BETA 3](#beta-3---look-at-my-code-im-sexy-now)
+[BETA 4](#beta-4---sylvester-standalone)
 
 ![alt text](https://clpo.net/github/screen.png "Screen")
 
@@ -96,6 +97,30 @@ https://validator.w3.org/nu/?doc=https://x.clpo.net/
   <img src="https://clpo.net/github/feedback.png" />
 </p>
 
+
+
+
+## BETA 4 - SYLVESTER STANDALONE
+
+- Fix : Microsoft Internet Explorer's iframe
+-  Added : forward & back buttons for Microsoft Internet Explorer 
+- New target for Microsoft Internet Explorer : 
+ https://github.com/XXIIVV/Webring  //  [https://webring.xxiivv.com/](https://webring.xxiivv.com/)
+- Fix : Notification system @Onesignal
+- ####  New Progressive Web APP features :
+![enter image description here](https://image.noelshack.com/fichiers/2020/07/1/1581363873-pwa.png)
+- Compatible with all devices running GOOGLE CHROME.
+- Compatible with stock Android devices web browser.
+- Toggle a "pop-up" to install the app.
+- New Manifest.json  
+- #### Massive optimisation Work :
+![GTMEtrix Results](https://image.noelshack.com/fichiers/2020/07/1/1581362586-optimization.png)
+- Leverage Browser Caching
+- Serve Scaled images
+- Optimize Images
+- Minify
+- Defer parsing of JavaScript
+- Enable Compression
 
 Service Worker : 
 https://developers.google.com/web/fundamentals/primers/service-workers/
