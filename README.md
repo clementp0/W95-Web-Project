@@ -1,6 +1,6 @@
 
 
-# Windows 95 - Web project
+# Windows 95 - Web project (Discontinued)
 
 
 Trying to recreate w95 experience, using only html/css and less js as possible.
