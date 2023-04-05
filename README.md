@@ -18,7 +18,7 @@ Feel free to send feedback about your experience on my website.
 [BETA 3](#beta-3---look-at-my-code-im-sexy-now)
 [BETA 4](#beta-4---sylvester-standalone)
 
-![alt text](https://clpo.net/github/screen.png "Screen")
+![Screen](https://cdn.discordapp.com/attachments/778932989693526038/1093316049576927232/w95.png)
 
 ## BETA 1 - THE PWA UPDATE
 
