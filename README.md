@@ -68,11 +68,6 @@ Feel free to send feedback about your experience on my website.
 
 `https://github.com/clementp0/W95-Web-Project/releases`
 
-<p align="center">
-  <img src="https://clpo.net/github/achievement.png" />
-</p>
-
-
 
 ## BETA 3 - LOOK AT MY CODE, IM SEXY NOW  
 
@@ -92,11 +87,6 @@ https://validator.w3.org/nu/?doc=https://x.clpo.net/
             alt="CSS Valide !" />
     </a>
 </p>
-
-<p align="center">
-  <img src="https://clpo.net/github/feedback.png" />
-</p>
-
 
 
 
