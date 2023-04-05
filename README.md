@@ -98,13 +98,11 @@ https://validator.w3.org/nu/?doc=https://x.clpo.net/
  https://github.com/XXIIVV/Webring  //  [https://webring.xxiivv.com/](https://webring.xxiivv.com/)
 - Fix : Notification system @Onesignal
 - ####  New Progressive Web APP features :
-![enter image description here](https://image.noelshack.com/fichiers/2020/07/1/1581363873-pwa.png)
 - Compatible with all devices running GOOGLE CHROME.
 - Compatible with stock Android devices web browser.
 - Toggle a "pop-up" to install the app.
 - New Manifest.json  
 - #### Massive optimisation Work :
-![GTMEtrix Results](https://image.noelshack.com/fichiers/2020/07/1/1581362586-optimization.png)
 - Leverage Browser Caching
 - Serve Scaled images
 - Optimize Images
