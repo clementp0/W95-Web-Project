@@ -1,6 +1,6 @@
 
 
-# Windows 95 - Web project (Discontinued)
+# Windows 95 - Web project (Discontinued 2019)
 
 
 Trying to recreate w95 experience, using only html/css and less js as possible.
@@ -18,7 +18,9 @@ Feel free to send feedback about your experience on my website.
 [BETA 3](#beta-3---look-at-my-code-im-sexy-now)
 [BETA 4](#beta-4---sylvester-standalone)
 
-![Screen](https://cdn.discordapp.com/attachments/778932989693526038/1093316049576927232/w95.png)
+<p align="center">
+    <img src="https://github.com/clementp0/W95-Web-Project/assets/15802129/a62fae00-5e88-46e1-84eb-eb383d8ab0e0">
+</p>
 
 ## BETA 1 - THE PWA UPDATE
 
